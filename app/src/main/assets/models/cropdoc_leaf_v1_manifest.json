@@ -1,0 +1,16 @@
+{
+  "model_id": "cropdoc_leaf_v1_int8",
+  "model_version": "1.0.0-int8",
+  "schema_version": "1.0.0",
+  "sha256": "e5591b7019326089c54400842b74447f341441c7e51e1e9a068f3fe898fd57b8",
+  "input_shape": [1, 224, 224, 3],
+  "input_dtype": "uint8",
+  "output_class_count": 16,
+  "output_dtype": "float32",
+  "preprocessing_contract_id": "cropdoc_preprocessing_v1",
+  "labels_checksum": "547ca66a",
+  "non_diagnostic_classes": [
+    "background_not_a_leaf"
+  ],
+  "evidence_report_hash": ""
+}

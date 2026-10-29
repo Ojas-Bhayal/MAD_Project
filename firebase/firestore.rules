@@ -1,0 +1,96 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isValidOutcome(outcome) {
+      return outcome in [
+        'CONFIDENT_DISEASE',
+        'HEALTHY_LEAF',
+        'LOW_CONFIDENCE_RETAKE',
+        'NOT_A_SUPPORTED_LEAF'
+      ];
+    }
+
+    function isValidScanPayload(data) {
+      return data.keys().hasAll([
+          'scanId', 'userId', 'cropId', 'diseaseId', 'confidence', 'outcome', 'timestampMs'
+        ])
+        && data.keys().size() <= 12
+        && data.scanId is string && data.scanId.size() <= 64
+        && data.userId is string
+        && data.cropId is string && data.cropId.size() <= 64
+        && data.diseaseId is string && data.diseaseId.size() <= 64
+        && data.confidence is number && data.confidence >= 0.0 && data.confidence <= 1.0
+        && isValidOutcome(data.outcome)
+        && data.timestampMs is int && data.timestampMs > 0;
+    }
+
+    match /users/{userId}/scans/{scanId} {
+      allow read: if isOwner(userId);
+      allow create, update: if isOwner(userId)
+        && request.resource.data.userId == userId
+        && request.resource.data.scanId == scanId
+        && isValidScanPayload(request.resource.data);
+      allow delete: if isOwner(userId);
+    }
+
+    function isValidResearchScanPayload(data, userId, scanId) {
+      return data.keys().hasAll([
+          'scanId', 'userId', 'cropKey', 'status', 'classId', 'modelScore',
+          'scoreType', 'inferenceTimeMs', 'timestampMs', 'message', 'modelType', 'researchOnly'
+        ])
+        && data.keys().hasOnly([
+          'scanId', 'userId', 'cropKey', 'status', 'classId', 'modelScore',
+          'scoreType', 'inferenceTimeMs', 'timestampMs', 'message', 'modelType', 'researchOnly'
+        ])
+        && data.scanId is string && data.scanId == scanId && data.scanId.size() <= 64
+        && data.userId is string && data.userId == userId
+        && data.cropKey is string && data.cropKey in ['rice', 'groundnut', 'cotton']
+        && data.status is string && data.status in ['RESULT', 'REJECTED', 'UNAVAILABLE']
+        && data.classId is string && data.classId.size() <= 64
+        && data.modelScore is number && data.modelScore >= 0.0 && data.modelScore <= 1.0
+        && data.scoreType == 'uncalibrated_model_score'
+        && data.inferenceTimeMs is int && data.inferenceTimeMs >= 0
+        && data.timestampMs is int && data.timestampMs > 0
+        && data.message is string && data.message.size() <= 500
+        && data.modelType == 'debug_research_scan'
+        && data.researchOnly == true;
+    }
+
+    // Experimental Scan-screen records are deliberately isolated from verified /scans.
+    match /users/{userId}/research_scans/{scanId} {
+      allow read: if isOwner(userId);
+      allow create, update: if isOwner(userId)
+        && isValidResearchScanPayload(request.resource.data, userId, scanId);
+      allow delete: if isOwner(userId);
+    }
+
+    match /users/{userId}/feedback/{feedbackId} {
+      allow read: if isOwner(userId);
+      allow create, update: if isOwner(userId)
+        && request.resource.data.userId == userId
+        && request.resource.data.scanId == feedbackId
+        && request.resource.data.helpful is bool
+        && request.resource.data.modelVersion is string
+        && request.resource.data.modelVersion.size() <= 32;
+      allow delete: if isOwner(userId);
+    }
+
+    match /advice_catalog/{diseaseId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

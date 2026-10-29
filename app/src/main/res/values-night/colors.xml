@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_green">#81C784</color>
+    <color name="on_primary_white">#0A200D</color>
+    <color name="primary_container">#1B4320</color>
+    <color name="on_primary_container">#C8E6C9</color>
+    <color name="secondary_green">#A5D6A7</color>
+    <color name="secondary_container">#1E3A23</color>
+    <color name="on_secondary_container">#D7F2DA</color>
+    <color name="surface_bg">#0E150F</color>
+    <color name="surface_card">#172219</color>
+    <color name="on_surface_text">#E8F5E9</color>
+    <color name="on_surface_variant">#B8CCB9</color>
+    <color name="outline_subtle">#2E4431</color>
+    <color name="warning_amber_bg">#3B2A00</color>
+    <color name="warning_amber_text">#FFE082</color>
+    <color name="error_red">#FFB4AB</color>
+    <color name="surface_error_container">#410E0B</color>
+    <color name="reticle_stroke">#69F0AE</color>
+    <color name="scrim_camera_overlay">#99050A06</color>
+</resources>

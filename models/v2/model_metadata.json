@@ -1,0 +1,18 @@
+{
+  "model_name": "CropDoc MobileNetV3-Large Field-Augmented INT8 (v2 Expansion)",
+  "model_version": "2.0.0-int8",
+  "baseline_v1_version": "1.0.0-int8",
+  "litert_runtime_version": "2.3.0",
+  "quantization": "Full-Integer INT8 (uint8 input [1,224,224,3], float32 output [1,22])",
+  "input_width": 224,
+  "input_height": 224,
+  "input_channels": 3,
+  "num_classes": 22,
+  "v1_indices_preserved": "0..15 (100% identical to v1)",
+  "v2_appended_indices": "16..21 (groundnut, chilli, soybean)",
+  "temperature_scaling_T": 1.45,
+  "confidence_threshold": 0.65,
+  "max_normalized_entropy": 0.55,
+  "min_leaf_pixel_ratio": 0.18,
+  "sha256": "e409b6f4c470996fa309a4c181161401da5db43a833f0f6aecb12d61ded44f34"
+}

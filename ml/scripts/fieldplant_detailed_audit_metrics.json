@@ -1,0 +1,236 @@
+{
+  "cat_summary": {
+    "leaves": {
+      "category_id": 0,
+      "total_leaf_annotations": 0,
+      "total_parent_images": 0,
+      "unique_parent_sha256": 0,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Cassava Bacterial Blight": {
+      "category_id": 1,
+      "total_leaf_annotations": 25,
+      "total_parent_images": 22,
+      "unique_parent_sha256": 22,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Cassava Brown Leaf Spot": {
+      "category_id": 2,
+      "total_leaf_annotations": 211,
+      "total_parent_images": 192,
+      "unique_parent_sha256": 186,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Cassava Healthy": {
+      "category_id": 3,
+      "total_leaf_annotations": 417,
+      "total_parent_images": 264,
+      "unique_parent_sha256": 264,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Cassava Mosaic": {
+      "category_id": 4,
+      "total_leaf_annotations": 1897,
+      "total_parent_images": 1077,
+      "unique_parent_sha256": 1077,
+      "tiny_boxes": 1,
+      "extreme_aspect": 1
+    },
+    "Cassava Root Rot": {
+      "category_id": 5,
+      "total_leaf_annotations": 77,
+      "total_parent_images": 74,
+      "unique_parent_sha256": 74,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Corn Brown Spots": {
+      "category_id": 6,
+      "total_leaf_annotations": 220,
+      "total_parent_images": 172,
+      "unique_parent_sha256": 172,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Corn Charcoal": {
+      "category_id": 7,
+      "total_leaf_annotations": 1,
+      "total_parent_images": 1,
+      "unique_parent_sha256": 1,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Corn Chlorotic Leaf Spot": {
+      "category_id": 8,
+      "total_leaf_annotations": 26,
+      "total_parent_images": 26,
+      "unique_parent_sha256": 26,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Corn Gray leaf spot": {
+      "category_id": 9,
+      "total_leaf_annotations": 54,
+      "total_parent_images": 30,
+      "unique_parent_sha256": 30,
+      "tiny_boxes": 0,
+      "extreme_aspect": 1
+    },
+    "Corn Healthy": {
+      "category_id": 10,
+      "total_leaf_annotations": 152,
+      "total_parent_images": 105,
+      "unique_parent_sha256": 105,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Corn Insects Damages": {
+      "category_id": 11,
+      "total_leaf_annotations": 17,
+      "total_parent_images": 17,
+      "unique_parent_sha256": 17,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Corn Mildew": {
+      "category_id": 12,
+      "total_leaf_annotations": 43,
+      "total_parent_images": 41,
+      "unique_parent_sha256": 41,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Corn Purple Discoloration": {
+      "category_id": 13,
+      "total_leaf_annotations": 8,
+      "total_parent_images": 8,
+      "unique_parent_sha256": 8,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Corn Smut": {
+      "category_id": 14,
+      "total_leaf_annotations": 13,
+      "total_parent_images": 13,
+      "unique_parent_sha256": 13,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Corn Streak": {
+      "category_id": 15,
+      "total_leaf_annotations": 252,
+      "total_parent_images": 182,
+      "unique_parent_sha256": 182,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Corn Stripe": {
+      "category_id": 16,
+      "total_leaf_annotations": 162,
+      "total_parent_images": 104,
+      "unique_parent_sha256": 104,
+      "tiny_boxes": 0,
+      "extreme_aspect": 1
+    },
+    "Corn Violet Decoloration": {
+      "category_id": 17,
+      "total_leaf_annotations": 7,
+      "total_parent_images": 6,
+      "unique_parent_sha256": 6,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Corn Yellow Spots": {
+      "category_id": 18,
+      "total_leaf_annotations": 16,
+      "total_parent_images": 16,
+      "unique_parent_sha256": 16,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Corn Yellowing": {
+      "category_id": 19,
+      "total_leaf_annotations": 495,
+      "total_parent_images": 307,
+      "unique_parent_sha256": 307,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Corn leaf blight": {
+      "category_id": 20,
+      "total_leaf_annotations": 1652,
+      "total_parent_images": 1111,
+      "unique_parent_sha256": 1111,
+      "tiny_boxes": 0,
+      "extreme_aspect": 1
+    },
+    "Corn rust leaf": {
+      "category_id": 21,
+      "total_leaf_annotations": 49,
+      "total_parent_images": 46,
+      "unique_parent_sha256": 46,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Tomato Brown Spots": {
+      "category_id": 22,
+      "total_leaf_annotations": 1967,
+      "total_parent_images": 952,
+      "unique_parent_sha256": 763,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Tomato bacterial wilt": {
+      "category_id": 23,
+      "total_leaf_annotations": 2,
+      "total_parent_images": 1,
+      "unique_parent_sha256": 1,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Tomato blight leaf": {
+      "category_id": 24,
+      "total_leaf_annotations": 404,
+      "total_parent_images": 359,
+      "unique_parent_sha256": 359,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Tomato healthy": {
+      "category_id": 25,
+      "total_leaf_annotations": 279,
+      "total_parent_images": 141,
+      "unique_parent_sha256": 141,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Tomato leaf mosaic virus": {
+      "category_id": 26,
+      "total_leaf_annotations": 19,
+      "total_parent_images": 13,
+      "unique_parent_sha256": 13,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    },
+    "Tomato leaf yellow virus": {
+      "category_id": 27,
+      "total_leaf_annotations": 115,
+      "total_parent_images": 66,
+      "unique_parent_sha256": 66,
+      "tiny_boxes": 0,
+      "extreme_aspect": 0
+    }
+  },
+  "exact_dupe_groups": 231,
+  "exact_dupe_images": 462,
+  "exact_dupe_identical_anns": 91,
+  "exact_dupe_ann_conflicts": 140,
+  "phash_dupes_count": 245,
+  "clipped_boxes": 1293,
+  "tiny_boxes": 1,
+  "extreme_aspect_boxes": 4
+}

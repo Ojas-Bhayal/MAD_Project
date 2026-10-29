@@ -1,0 +1,189 @@
+{
+  "total_ood_samples": 120,
+  "threshold_analysis": {
+    "tau_0.5": {
+      "threshold": 0.5,
+      "false_positives_accepted": 84,
+      "false_positive_rate": 0.7,
+      "correctly_rejected": 36,
+      "rejection_rate": 0.3
+    },
+    "tau_0.7": {
+      "threshold": 0.7,
+      "false_positives_accepted": 47,
+      "false_positive_rate": 0.3917,
+      "correctly_rejected": 73,
+      "rejection_rate": 0.6083
+    },
+    "tau_0.85": {
+      "threshold": 0.85,
+      "false_positives_accepted": 23,
+      "false_positive_rate": 0.1917,
+      "correctly_rejected": 97,
+      "rejection_rate": 0.8083
+    },
+    "tau_0.9": {
+      "threshold": 0.9,
+      "false_positives_accepted": 17,
+      "false_positive_rate": 0.1417,
+      "correctly_rejected": 103,
+      "rejection_rate": 0.8583
+    },
+    "tau_0.95": {
+      "threshold": 0.95,
+      "false_positives_accepted": 5,
+      "false_positive_rate": 0.0417,
+      "correctly_rejected": 115,
+      "rejection_rate": 0.9583
+    },
+    "tau_0.98": {
+      "threshold": 0.98,
+      "false_positives_accepted": 0,
+      "false_positive_rate": 0.0,
+      "correctly_rejected": 120,
+      "rejection_rate": 1.0
+    }
+  },
+  "samples": [
+    {
+      "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(1).jpg",
+      "ood_type": "cotton_unsupported_crop",
+      "pred_class": "groundnut_early_leaf_spot",
+      "pred_global_idx": 16,
+      "max_confidence": 0.8872
+    },
+    {
+      "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(10).jpg",
+      "ood_type": "cotton_unsupported_crop",
+      "pred_class": "groundnut_healthy",
+      "pred_global_idx": 17,
+      "max_confidence": 0.9256
+    },
+    {
+      "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(100).jpg",
+      "ood_type": "cotton_unsupported_crop",
+      "pred_class": "groundnut_healthy",
+      "pred_global_idx": 17,
+      "max_confidence": 0.401
+    },
+    {
+      "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(101).jpg",
+      "ood_type": "cotton_unsupported_crop",
+      "pred_class": "groundnut_early_leaf_spot",
+      "pred_global_idx": 16,
+      "max_confidence": 0.9061
+    },
+    {
+      "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(102).jpg",
+      "ood_type": "cotton_unsupported_crop",
+      "pred_class": "rice_leaf_blast",
+      "pred_global_idx": 2,
+      "max_confidence": 0.4451
+    },
+    {
+      "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(103).jpg",
+      "ood_type": "cotton_unsupported_crop",
+      "pred_class": "groundnut_healthy",
+      "pred_global_idx": 17,
+      "max_confidence": 0.5819
+    },
+    {
+      "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(104).jpg",
+      "ood_type": "cotton_unsupported_crop",
+      "pred_class": "groundnut_healthy",
+      "pred_global_idx": 17,
+      "max_confidence": 0.6426
+    },
+    {
+      "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(105).jpg",
+      "ood_type": "cotton_unsupported_crop",
+      "pred_class": "groundnut_healthy",
+      "pred_global_idx": 17,
+      "max_confidence": 0.5306
+    },
+    {
+      "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(106).jpg",
+      "ood_type": "cotton_unsupported_crop",
+      "pred_class": "rice_leaf_blast",
+      "pred_global_idx": 2,
+      "max_confidence": 0.742
+    },
+    {
+      "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(107).jpg",
+      "ood_type": "cotton_unsupported_crop",
+      "pred_class": "rice_leaf_blast",
+      "pred_global_idx": 2,
+      "max_confidence": 0.5196
+    },
+    {
+      "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(108).jpg",
+      "ood_type": "cotton_unsupported_crop",
+      "pred_class": "rice_leaf_blast",
+      "pred_global_idx": 2,
+      "max_confidence": 0.5439
+    },
+    {
+      "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(109).jpg",
+      "ood_type": "cotton_unsupported_crop",
+      "pred_class": "groundnut_healthy",
+      "pred_global_idx": 17,
+      "max_confidence": 0.8845
+    },
+    {
+      "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(110).jpg",
+      "ood_type": "cotton_unsupported_crop",
+      "pred_class": "rice_leaf_blast",
+      "pred_global_idx": 2,
+      "max_confidence": 0.8096
+    },
+    {
+      "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(111).jpg",
+      "ood_type": "cotton_unsupported_crop",
+      "pred_class": "groundnut_healthy",
+      "pred_global_idx": 17,
+      "max_confidence": 0.5931
+    },
+    {
+      "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(112).jpg",
+      "ood_type": "cotton_unsupported_crop",
+      "pred_class": "groundnut_early_leaf_spot",
+      "pred_global_idx": 16,
+      "max_confidence": 0.7972
+    },
+    {
+      "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(113).jpg",
+      "ood_type": "cotton_unsupported_crop",
+      "pred_class": "groundnut_early_leaf_spot",
+      "pred_global_idx": 16,
+      "max_confidence": 0.9651
+    },
+    {
+      "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(114).jpg",
+      "ood_type": "cotton_unsupported_crop",
+      "pred_class": "groundnut_healthy",
+      "pred_global_idx": 17,
+      "max_confidence": 0.4679
+    },
+    {
+      "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(115).jpg",
+      "ood_type": "cotton_unsupported_crop",
+      "pred_class": "groundnut_healthy",
+      "pred_global_idx": 17,
+      "max_confidence": 0.5014
+    },
+    {
+      "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(116).jpg",
+      "ood_type": "cotton_unsupported_crop",
+      "pred_class": "groundnut_healthy",
+      "pred_global_idx": 17,
+      "max_confidence": 0.7303
+    },
+    {
+      "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(117).jpg",
+      "ood_type": "cotton_unsupported_crop",
+      "pred_class": "groundnut_healthy",
+      "pred_global_idx": 17,
+      "max_confidence": 0.5073
+    }
+  ]
+}

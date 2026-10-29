@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="research_mode_heading">Research Model (Debug Only)</string>
+    <string name="research_mode_six_class">Rice + Groundnut (6 classes)</string>
+    <string name="research_mode_cotton_pilot">Cotton Pilot (2 classes)</string>
+    <string name="research_mode_help">Choose the crop model first, then select a new image. Switching models clears the previous image. The cotton pilot is separate from the six-class rice/groundnut pipeline.</string>
+    <string name="research_cotton_model_unavailable_warning">Cotton pilot model unavailable. Export cotton_binary_fp32.tflite and its matching manifest, then copy both to app/src/debug/assets/research_models/. No prediction was generated.</string>
+    <string name="research_cotton_pilot_result_title">Cotton Pilot Result — Research Only</string>
+    <string name="research_cotton_pilot_score_fmt">Uncalibrated model score: %1$d%% · inference: %2$d ms</string>
+    <string name="research_cotton_pilot_disclaimer">EXPERIMENTAL ONLY. The cotton source labels have not been certified by a plant pathologist. This score is not a validated disease probability; do not use it for crop-treatment decisions.</string>
+    <string name="research_sample_asset_missing">The bundled sample image is missing or could not be decoded. No inference was run.</string>
+    <string name="research_loading_text_cotton">Analyzing image through the cotton pilot (quality + foliage checks)…</string>
+    <string name="research_disclaimer_body_cotton">Experimental research models only: the existing six-class pipeline covers rice and groundnut; the separate cotton binary pilot is unvalidated. None of these research outputs is a verified production diagnosis. The production release gate remains locked.</string>
+</resources>

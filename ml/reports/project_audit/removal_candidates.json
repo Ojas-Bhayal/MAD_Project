@@ -1,0 +1,167 @@
+{
+  "audit_version": "2.0.0",
+  "audit_timestamp": "2026-10-24T23:55:00+05:30",
+  "total_candidates": 50,
+  "candidates": [
+    {
+      "candidate_id": "RM-035",
+      "relative_path": "app/src/main/assets/models/model_metadata.json",
+      "file_type": "json",
+      "size_bytes": 958,
+      "git_status": "Tracked",
+      "recommendation": "KEEP",
+      "confidence": "High",
+      "approval_status": "RETAINED"
+    },
+    {
+      "candidate_id": "RM-036",
+      "relative_path": "ml/scripts/fieldplant_detailed_audit_metrics.json",
+      "file_type": "json",
+      "size_bytes": 6411,
+      "git_status": "Untracked",
+      "recommendation": "KEEP",
+      "confidence": "High",
+      "approval_status": "RETAINED"
+    },
+    {
+      "candidate_id": "RM-037",
+      "relative_path": "ml/scripts/fieldplant_image_audit_summary.json",
+      "file_type": "json",
+      "size_bytes": 178,
+      "git_status": "Untracked",
+      "recommendation": "KEEP",
+      "confidence": "High",
+      "approval_status": "RETAINED"
+    },
+    {
+      "candidate_id": "RM-038",
+      "relative_path": "ml/scripts/get_config_client.py",
+      "file_type": "python",
+      "size_bytes": 658,
+      "git_status": "Untracked",
+      "recommendation": "PROPOSE REMOVAL",
+      "confidence": "High",
+      "approval_status": "PENDING_APPROVAL"
+    },
+    {
+      "candidate_id": "RM-039",
+      "relative_path": "ml/scripts/inspect_exact_and_phash.py",
+      "file_type": "python",
+      "size_bytes": 1845,
+      "git_status": "Untracked",
+      "recommendation": "PROPOSE REMOVAL",
+      "confidence": "High",
+      "approval_status": "PENDING_APPROVAL"
+    },
+    {
+      "candidate_id": "RM-040",
+      "relative_path": "ml/scripts/inspect_groundnut_duplicates.py",
+      "file_type": "python",
+      "size_bytes": 2027,
+      "git_status": "Untracked",
+      "recommendation": "PROPOSE REMOVAL",
+      "confidence": "High",
+      "approval_status": "PENDING_APPROVAL"
+    },
+    {
+      "candidate_id": "RM-041",
+      "relative_path": "ml/scripts/inspect_remaining_cross.py",
+      "file_type": "python",
+      "size_bytes": 5405,
+      "git_status": "Untracked",
+      "recommendation": "PROPOSE REMOVAL",
+      "confidence": "High",
+      "approval_status": "PENDING_APPROVAL"
+    },
+    {
+      "candidate_id": "RM-042",
+      "relative_path": "ml/scripts/analyze_hamming_distances.py",
+      "file_type": "python",
+      "size_bytes": 1293,
+      "git_status": "Untracked",
+      "recommendation": "PROPOSE REMOVAL",
+      "confidence": "High",
+      "approval_status": "PENDING_APPROVAL"
+    },
+    {
+      "candidate_id": "RM-043",
+      "relative_path": "ml/scripts/test_268_split_audit.py",
+      "file_type": "python",
+      "size_bytes": 5381,
+      "git_status": "Untracked",
+      "recommendation": "PROPOSE REMOVAL",
+      "confidence": "Medium",
+      "approval_status": "PENDING_APPROVAL"
+    },
+    {
+      "candidate_id": "RM-044",
+      "relative_path": "ml/scripts/test_clustering_criteria.py",
+      "file_type": "python",
+      "size_bytes": 4349,
+      "git_status": "Untracked",
+      "recommendation": "PROPOSE REMOVAL",
+      "confidence": "High",
+      "approval_status": "PENDING_APPROVAL"
+    },
+    {
+      "candidate_id": "RM-045",
+      "relative_path": "ml/scripts/test_final_clustering_rule.py",
+      "file_type": "python",
+      "size_bytes": 2292,
+      "git_status": "Untracked",
+      "recommendation": "PROPOSE REMOVAL",
+      "confidence": "High",
+      "approval_status": "PENDING_APPROVAL"
+    },
+    {
+      "candidate_id": "RM-046",
+      "relative_path": "ml/scripts/test_refined_rule.py",
+      "file_type": "python",
+      "size_bytes": 2256,
+      "git_status": "Untracked",
+      "recommendation": "PROPOSE REMOVAL",
+      "confidence": "High",
+      "approval_status": "PENDING_APPROVAL"
+    },
+    {
+      "candidate_id": "RM-047",
+      "relative_path": "ml/scripts/test_rule_with_dh3.py",
+      "file_type": "python",
+      "size_bytes": 2292,
+      "git_status": "Untracked",
+      "recommendation": "PROPOSE REMOVAL",
+      "confidence": "High",
+      "approval_status": "PENDING_APPROVAL"
+    },
+    {
+      "candidate_id": "RM-048",
+      "relative_path": "ml/scripts/test_specimen_grouping.py",
+      "file_type": "python",
+      "size_bytes": 2680,
+      "git_status": "Untracked",
+      "recommendation": "PROPOSE REMOVAL",
+      "confidence": "High",
+      "approval_status": "PENDING_APPROVAL"
+    },
+    {
+      "candidate_id": "RM-049",
+      "relative_path": "ml/scripts/test_phash_merging.py",
+      "file_type": "python",
+      "size_bytes": 3110,
+      "git_status": "Untracked",
+      "recommendation": "PROPOSE REMOVAL",
+      "confidence": "High",
+      "approval_status": "PENDING_APPROVAL"
+    },
+    {
+      "candidate_id": "RM-050",
+      "relative_path": "ml/scripts/test_split_regeneration.py",
+      "file_type": "python",
+      "size_bytes": 5977,
+      "git_status": "Untracked",
+      "recommendation": "KEEP",
+      "confidence": "High",
+      "approval_status": "PENDING_APPROVAL"
+    }
+  ]
+}

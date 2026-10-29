@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="UnusedResources" severity="error" />
+    <issue id="HardcodedText" severity="error" />
+    <issue id="ContentDescription" severity="error" />
+    <issue id="ExifInterface" severity="error" />
+    <issue id="StaticFieldLeak" severity="error" />
+
+    <!-- Narrowly scoped exceptions for verified third-party libraries:
+         1. byte-buddy is a test-only dependency for Mockito unit tests on host JVM.
+         2. grpc-core is a transitive dependency of Firestore with optional desktop JNDI resolver. -->
+    <issue id="InvalidPackage">
+        <ignore path="**/*byte-buddy*" />
+        <ignore path="**/*grpc-core*" />
+    </issue>
+</lint>

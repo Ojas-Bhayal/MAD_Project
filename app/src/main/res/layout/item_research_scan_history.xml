@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_small"
+    app:cardBackgroundColor="@color/surface_card"
+    app:cardCornerRadius="@dimen/radius_medium"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/outline_subtle"
+    app:strokeWidth="1dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_small">
+        <ImageView
+            android:id="@+id/img_research_history_thumb"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:contentDescription="@string/cd_leaf_thumbnail"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_leaf_scan" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_research_history_title"
+                style="@style/TextAppearance.CropDoc.SectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2" />
+            <TextView
+                android:id="@+id/txt_research_history_details"
+                style="@style/TextAppearance.CropDoc.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:maxLines="3" />
+            <TextView
+                android:id="@+id/txt_research_history_timestamp"
+                style="@style/TextAppearance.CropDoc.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp" />
+            <TextView
+                android:id="@+id/txt_research_history_badge"
+                style="@style/TextAppearance.CropDoc.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/research_history_badge"
+                android:textColor="@color/primary_green" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

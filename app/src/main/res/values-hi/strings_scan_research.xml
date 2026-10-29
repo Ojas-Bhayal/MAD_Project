@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_research_banner">AI फसल स्कैन — प्रारंभिक मॉडल परिणाम। स्कैन से पहले सही फसल चुनें। परीक्षण के लिए स्क्रीन की तस्वीर लेने के बजाय गैलरी से मूल फोटो चुनें।</string>
+    <string name="scan_research_crop_selector_description">इस स्कैन के लिए फसल मॉडल चुनें</string>
+    <string name="scan_research_capture_button">पत्ती की फोटो लें और अनुमान प्राप्त करें</string>
+    <string name="scan_research_gallery_button">गैलरी से पत्ती की फोटो चुनें</string>
+    <string name="scan_research_choose_crop_first">स्कैन करने से पहले सही फसल चुनें। कोई मॉडल नहीं चलाया गया।</string>
+    <string-array name="scan_research_crop_options">
+                <item>— सही फसल चुनें —</item>
+<item>धान (4-श्रेणी पायलट)</item>
+        <item>मूंगफली (2-श्रेणी पायलट)</item>
+        <item>कपास (2-श्रेणी पायलट)</item>
+    </string-array>
+    <string name="scan_research_result_title">AI मॉडल अनुमान — प्रारंभिक परिणाम</string>
+    <string name="scan_research_result_body">चुनी गई फसल: %1$s\nमॉडल परिणाम: %2$s\nअंशांकित नहीं किया गया मॉडल स्कोर: %3$d%%\nअनुमान समय: %4$d ms</string>
+    <string name="scan_research_result_disclaimer">यह प्रायोगिक मॉडल का परिणाम है, सत्यापित उत्पादन निदान नहीं। स्कोर अंशांकित नहीं हैं और गलत हो सकते हैं। परिणाम केवल स्थानीय प्रायोगिक स्कैन इतिहास में सहेजे जाते हैं, सत्यापित निदान के रूप में नहीं। कोई उपचार सलाह नहीं दी जाती और ये रिकॉर्ड Firestore से सिंक नहीं होते।</string>
+    <string name="scan_research_unavailable_title">चुना गया फसल मॉडल उपलब्ध नहीं है</string>
+    <string name="scan_research_rejected_title">कोई अनुमान स्वीकार नहीं हुआ</string>
+    <string name="scan_research_error_title">स्कैन का मूल्यांकन नहीं हो सका</string>
+    <string name="scan_research_no_result_message">चुना गया फसल मॉडल उपयोग योग्य परिणाम नहीं दे सका। कोई निदान सहेजा नहीं गया।</string>
+    <string name="scan_crop_rice">धान</string>
+    <string name="scan_crop_groundnut">मूंगफली</string>
+    <string name="scan_crop_cotton">कपास</string>
+    <string name="scan_class_cotton_bacterial_blight">कपास का जीवाणु झुलसा (पायलट लेबल)</string>
+    <string name="scan_class_cotton_healthy">स्वस्थ कपास (पायलट लेबल)</string>
+</resources>

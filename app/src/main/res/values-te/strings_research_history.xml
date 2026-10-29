@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="research_history_heading">ప్రయోగాత్మక స్కాన్ చరిత్ర (పరిశోధన మాత్రమే)</string>
+    <string name="research_history_badge">ప్రయోగాత్మక • ధృవీకరించబడలేదు</string>
+    <string name="research_history_result_detail">అన్‌క్యాలిబ్రేటెడ్ స్కోర్: %1$d%% • సమయం: %2$d ms</string>
+    <string name="research_history_no_prediction">ఈ స్కాన్‌కు ఎలాంటి ఫలితం ఆమోదించబడలేదు.</string>
+    <string name="research_history_detail_dialog">పంట: %1$s
+ఫలితం/స్థితి: %2$s
+అన్‌క్యాలిబ్రేటెడ్ మోడల్ స్కోర్: %3$d%%
+సమయం: %4$s
+
+%5$s
+
+ఇది స్థానిక ప్రయోగాత్మక రికార్డు మాత్రమే, ధృవీకరించబడిన నిర్ధారణ కాదు.</string>
+<string name="research_history_nonresult_dialog">పంట: %1$s\nస్థితి: %2$s\nసమయం: %3$s\n\n%4$s\n\nఇది స్థానిక ప్రయోగాత్మక రికార్డు మాత్రమే, ధృవీకరించబడిన నిర్ధారణ కాదు.</string>
+</resources>

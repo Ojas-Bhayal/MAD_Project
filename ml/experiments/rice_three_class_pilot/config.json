@@ -1,0 +1,16 @@
+{
+  "experiment": "rice_three_class_pilot",
+  "model": "mobilenet_v3_small",
+  "pretrained": "ImageNet-1K",
+  "seed": 42,
+  "epochs": 20,
+  "batch_size": 16,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.01,
+  "patience": 5,
+  "classes": {
+    "rice_bacterial_leaf_blight": 0,
+    "rice_brown_spot": 1,
+    "rice_leaf_blast": 2
+  }
+}

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CropDoc</string>
+    <string name="default_web_client_id" translatable="false">000000000000-webclient.apps.googleusercontent.com</string>
+    <string name="lang_english" translatable="false">English</string>
+    <string name="lang_hindi" translatable="false">हिन्दी</string>
+    <string name="lang_telugu" translatable="false">తెలుగు</string>
+
+    <string name="nav_scan">Scan Leaf</string>
+    <string name="nav_result">Diagnosis</string>
+    <string name="nav_history">History</string>
+    <string name="nav_account">Account</string>
+
+    <string name="cd_camera_preview">Live camera viewfinder for crop leaf scanning</string>
+    <string name="cd_leaf_reticle">Center leaf framing box</string>
+    <string name="cd_leaf_thumbnail">Saved crop leaf scan thumbnail</string>
+
+    <string name="scan_reticle_instruction">Place a single diseased leaf inside the box in natural daylight</string>
+    <string name="btn_scan_leaf">Capture Leaf &amp; Diagnose Offline</string>
+    <string name="btn_pick_from_gallery">Pick Leaf Photo from Gallery</string>
+    <string name="btn_toggle_torch_off">Flash: Off</string>
+    <string name="btn_toggle_torch_on">Flash: On</string>
+    <string name="error_camera_capture">Could not capture photo. Try again or pick from gallery.</string>
+    <string name="error_image_decode_failed">Could not read leaf image. Please try another clear photo.</string>
+    <string name="status_model_unavailable">Diagnosis is currently unavailable. A verified model update is required.</string>
+    <string name="status_model_unavailable_debug">A verified production model is not yet bundled. Explore the experimental pipeline in the Research Demo.</string>
+    <string name="action_open_research_demo">Research Demo</string>
+    <string name="action_dismiss">Dismiss</string>
+    <string name="debug_model_unavailable_title">Production Model Unavailable</string>
+    <string name="debug_model_unavailable_message">A verified production model is not yet bundled. You can navigate to the Research Demo to evaluate the experimental multi-stage pipeline.</string>
+    <string name="status_image_rejected">Image could not be accepted. Please retake the photo with good lighting and focus.</string>
+    <string name="status_low_confidence_retake">Low confidence diagnosis. Please retake photo with better focus and daylight.</string>
+    <string name="permission_camera_rationale">Camera access is needed for live leaf scanning, or pick a photo from Gallery below.</string>
+    <string name="action_grant_camera">Grant Camera Access</string>
+    <string name="action_open_settings">Open App Settings</string>
+
+    <string name="confidence_format">Confidence: %1$d%%</string>
+    <string name="crop_and_disease_format" translatable="false">%1$s — %2$s</string>
+    <string name="banner_low_confidence" formatted="false">Low Confidence (&lt;65%) — Do NOT spray chemicals. Retake photo in bright daylight with one leaf centered.</string>
+    <string name="banner_not_a_leaf">No supported crop leaf detected (Rice, Tomato, Potato, Cotton, Maize). Frame a single leaf clearly.</string>
+    <string name="error_result_not_found">Scan record could not be loaded. Please scan the leaf again.</string>
+
+    <string name="btn_listen_audio_advice">Listen to Advice (Offline Voice)</string>
+    <string name="heading_causes">1. Causes &amp; Symptoms</string>
+    <string name="heading_cultural_bio">2. Cultural &amp; Biological Control (IPM First)</string>
+    <string name="heading_chemical_cibrc">3. CIB&amp;RC Approved Chemical Options (If Severe)</string>
+    <string name="heading_prevention">4. Prevention for Next Season</string>
+    <string name="kvk_safety_disclaimer">Advisory only (ICAR/CABI/CIB&amp;RC). Always wear protective gear (PPE) and verify dosage with your nearest Krishi Vigyan Kendra (KVK) before spraying.</string>
+
+    <string name="btn_feedback_helpful">Helpful (Thumb Up)</string>
+    <string name="btn_feedback_unhelpful">Wrong Diagnosis (Thumb Down)</string>
+    <string name="feedback_saved_message">Thank you! Your feedback helps improve CropDoc for Indian farmers.</string>
+    <string name="btn_retake_photo">Scan Another Leaf</string>
+
+    <string name="btn_delete_all_data_dpdp">Delete All Saved Scans (DPDP Privacy Right)</string>
+    <string name="empty_history_message" formatted="false">No leaf scans saved yet. All scans work 100% offline on your phone.</string>
+    <string name="btn_empty_scan_cta">Scan Your First Leaf</string>
+    <string name="status_synced">Synced to Cloud</string>
+    <string name="status_saved_offline">Saved Offline on Phone</string>
+    <string name="confirm_delete_history_title">Delete All Saved Scans?</string>
+    <string name="confirm_delete_history_body">This permanently removes all saved leaf photos and scan records from your phone and cloud backup.</string>
+
+    <string name="status_guest_mode_active" formatted="false">Mode: Offline Guest (100% On-Device Privacy)</string>
+    <string name="status_signed_in_as">Signed in: %1$s</string>
+    <string name="btn_toggle_dpdp_notice">DPDP Act Cloud Privacy Notice (Tap to Read)</string>
+    <string name="auth_consent_notice_dpdp">Optional Cloud Backup (India DPDP Act Notice): Sign in only if you consent to backing up cropped leaf photos (with GPS stripped) to sync across devices. Guest Mode keeps all data offline on your phone.</string>
+    <string name="hint_email">Email address</string>
+    <string name="hint_password">Password (6+ characters)</string>
+    <string name="btn_sign_in_email">Sign In with Email</string>
+    <string name="btn_register_email">Create New Account</string>
+    <string name="btn_forgot_password">Forgot Password?</string>
+    <string name="btn_sign_in_google">Sign In with Google</string>
+    <string name="btn_continue_guest_offline" formatted="false">Continue as Guest (100% Offline)</string>
+    <string name="btn_sign_out">Sign Out</string>
+    <string name="btn_delete_account_dpdp">Delete Account &amp; Cloud Data (DPDP Right)</string>
+    <string name="confirm_delete_account_title">Delete Account &amp; Data?</string>
+    <string name="confirm_delete_account_body">This permanently deletes your account, local leaf photos, and cloud scan records under India DPDP Act rights.</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_confirm_delete">Delete Permanently</string>
+    <string name="error_invalid_email">Please enter a valid email address.</string>
+    <string name="error_short_password">Password must be at least 6 characters.</string>
+    <string name="error_google_sign_in">Google Sign-In could not be completed. Use Guest Mode offline or try again.</string>
+    <string name="msg_password_reset_sent">Password reset link sent to your email.</string>
+    <string name="msg_signed_out">Signed out. Switched to Offline Guest Mode.</string>
+    <string name="msg_account_deleted">Account and all scan data permanently deleted.</string>
+
+    <string name="feedback_wrong_dialog_title">Report Wrong Diagnosis?</string>
+    <string name="feedback_wrong_dialog_body">Flagging an inaccurate result helps retrain the CropDoc model for local crop conditions.</string>
+    <string name="feedback_wrong_saved_message">Reported as inaccurate diagnosis. Thank you for your feedback!</string>
+    <plurals name="history_scan_count">
+        <item quantity="one">%1$d scan saved</item>
+        <item quantity="other">%1$d scans saved</item>
+    </plurals>
+
+    <!-- Research Demo Strings (Debug Only) -->
+    <string name="nav_research_demo">Research</string>
+    <string name="research_disclaimer_title">⚠️ Experimental Research Models (Demo Only)</string>
+    <string name="research_disclaimer_body">Dual LiteRT FP32 research models (Crop-Domain Gate &amp; 6-Class Disease Classifier) are active for scientific evaluation. These experimental models are strictly isolated from production and NOT validated for real-world agricultural diagnosis or field advice. Production release gate remains locked.</string>
+    <string name="research_disabled_in_release">Research Demo is strictly disabled in release builds.</string>
+    <string name="research_models_unavailable_warning">Native LiteRT models unavailable on current runtime host. Fail-closed containment active.</string>
+
+    <string name="btn_capture_research_photo">Capture Photo for Research</string>
+    <string name="btn_pick_research_image">Select Image from Gallery</string>
+    <string name="btn_sample_rice">Sample: Rice Foliage</string>
+    <string name="btn_sample_soil">Sample: Non-Leaf Soil</string>
+    <string name="btn_run_research_inference">Run Research Inference</string>
+    <string name="btn_retry_research">Retry Analysis</string>
+
+    <string name="research_preview_placeholder">No image selected.\nSelect an image from gallery or choose a sample to begin.</string>
+    <string name="research_loading_text">Analyzing image through 5-stage research pipeline…</string>
+    <string name="research_card_results_title">Multi-Stage Research Pipeline Results</string>
+
+    <string name="research_stage_quality_hdr">Stage 1: Image Quality Gate</string>
+    <string name="research_stage_foliar_hdr">Stage 2: Foliar Leaf Coverage Gate</string>
+    <string name="research_stage_domain_hdr">Stage 3: 3-Output Crop-Domain Gate</string>
+    <string name="research_stage_disease_hdr">Stage 4: 6-Class Research Disease Model</string>
+    <string name="research_stage_decision_hdr">Stage 5: Calibrated Safety Decision</string>
+    <string name="research_latency_summary_hdr">Latency &amp; Execution Metrics</string>
+    <string name="research_taxonomy_title">Isolated 6-Class Research Taxonomy</string>
+    <string name="research_taxonomy_content">Rice (Global 0–3): 0: BLB | 1: Brown Spot | 2: Leaf Blast | 3: Healthy\nGroundnut (Global 16–17): 4: Early Leaf Spot (#16) | 5: Healthy (#17)</string>
+
+    <string name="research_status_passed">PASSED</string>
+    <string name="research_status_rejected">REJECTED</string>
+    <string name="research_status_bypassed">BYPASSED</string>
+    <string name="research_status_not_run">NOT RUN</string>
+    <string name="research_status_inconclusive">INCONCLUSIVE</string>
+    <string name="research_status_error">ERROR</string>
+
+    <string name="research_status_quality_passed">PASSED: Dimensions &amp; lighting verified</string>
+    <string name="research_status_quality_rejected">Quality Gate Rejected: %1$s</string>
+    <string name="research_status_foliar_passed">PASSED: Foliar coverage >= 18% threshold</string>
+    <string name="research_status_foliar_rejected">Foliar Gate Rejected: %1$s</string>
+
+    <string name="research_status_domain_bypassed">NOT RUN: Upstream gating stopped pipeline</string>
+    <string name="research_status_domain_passed_fmt">PASSED: Domain: %1$s (%2$d%% confidence)</string>
+    <string name="research_status_domain_unsupported_fmt">REJECTED: Unsupported crop detected (%1$d%% confidence)</string>
+    <string name="research_status_domain_uncertain_fmt">REJECTED: Uncertain crop domain (%1$d%% confidence)</string>
+    <string name="research_status_domain_unavailable">REJECTED: Crop domain model unavailable</string>
+
+    <string name="research_status_disease_bypassed">BYPASSED: Upstream gating stopped pipeline (Fail-closed)</string>
+    <string name="research_status_disease_executed_fmt">EXECUTED: %1$s (Local #%2$d -> Global #%3$d, %4$d%%)</string>
+
+    <string name="research_status_decision_accepted">Research Prediction — Experimental (%1$s)</string>
+    <string name="research_status_decision_rejected">CONTAINED / REJECTED (%1$s)</string>
+
+    <string name="research_status_latency_fmt">Total: %1$d ms | Domain Gate: %2$s | Disease Model: %3$s</string>
+    <string name="research_latency_ms_fmt">%1$d ms</string>
+
+    <string name="crop_rice">Rice</string>
+    <string name="crop_groundnut">Groundnut</string>
+    <string name="crop_unsupported">Unsupported Crop</string>
+
+    <string name="disease_rice_bacterial_blight">Rice Bacterial Leaf Blight</string>
+    <string name="disease_rice_brown_spot">Rice Brown Spot</string>
+    <string name="disease_rice_blast">Rice Leaf Blast</string>
+    <string name="disease_rice_healthy">Rice Healthy</string>
+    <string name="disease_groundnut_early_leaf_spot">Groundnut Early Leaf Spot</string>
+    <string name="disease_groundnut_healthy">Groundnut Healthy</string>
+
+    <string name="outcome_accepted_supported">ACCEPTED</string>
+    <string name="outcome_inconclusive_low_conf">LOW CONFIDENCE (INCONCLUSIVE)</string>
+    <string name="outcome_out_of_domain">OUT OF DOMAIN</string>
+    <string name="outcome_invalid_model_output">INVALID OUTPUT</string>
+    <string name="outcome_model_unavailable">MODEL UNAVAILABLE</string>
+
+    <string name="rejection_detail_foliar_non_leaf">Foliar coverage ratio is below required 18% threshold (non-leaf).</string>
+    <string name="rejection_detail_unsupported_crop">Unsupported botanical specimen rejected by crop domain gate.</string>
+    <string name="rejection_detail_domain_uncertain">Crop domain confidence is below required 65% threshold.</string>
+    <string name="rejection_detail_low_confidence">Disease classification confidence is below calibrated threshold.</string>
+    <string name="rejection_detail_high_entropy">Prediction uncertainty (entropy) exceeds calibrated safety limit.</string>
+    <string name="rejection_detail_model_unavailable">Research inference models are unavailable on this device runtime.</string>
+    <string name="research_decision_accepted_explanation">Experimental research diagnosis confirmed within calibrated confidence thresholds. Not for field treatment.</string>
+
+    <string name="research_error_title">Analysis Error</string>
+    <string name="research_error_open_image">Failed to open selected image file.</string>
+    <string name="research_error_decode_failed">Image could not be decoded. Please select a clear JPG or PNG photo.</string>
+    <string name="research_error_inference_failed">Research inference failed during pipeline execution.</string>
+    <string name="research_error_no_image_selected">No image selected. Please pick an image first.</string>
+    <string name="research_camera_permission_denied_title">Camera Permission Required</string>
+    <string name="research_camera_permission_denied_msg">Camera permission is required to capture photos for research. Please grant camera access.</string>
+
+    <!-- Cotton binary output is research-only and is not a validated diagnosis. -->
+    <string name="disease_cotton_bacterial_blight">Cotton Bacterial Blight (experimental label)</string>
+    <string name="disease_cotton_healthy">Cotton Healthy (experimental label)</string>
+    <string name="research_status_cotton_experimental_fmt">COTTON RESEARCH PILOT: %1$s (model score %2$d%%; not calibrated)</string>
+</resources>

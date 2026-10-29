@@ -1,0 +1,189 @@
+{
+  "experiment_name": "crop_domain_gate",
+  "timestamp": "2026-10-24",
+  "duration_seconds": 16.83,
+  "model_architecture": "mobilenet_v3_small",
+  "random_seed": 42,
+  "domain_mapping": {
+    "0": "supported_rice",
+    "1": "supported_groundnut",
+    "2": "unsupported_crop"
+  },
+  "training_history": {
+    "train_loss": [
+      0.2191,
+      0.0231,
+      0.0148,
+      0.0175,
+      0.0143,
+      0.0056
+    ],
+    "train_acc": [
+      0.9264,
+      0.993,
+      0.9962,
+      0.9942,
+      0.9936,
+      0.9968
+    ],
+    "val_loss": [
+      0.089,
+      0.0272,
+      0.031,
+      0.0037,
+      0.0035,
+      0.0015
+    ],
+    "val_acc": [
+      0.9636,
+      0.9909,
+      0.9879,
+      1.0,
+      0.997,
+      1.0
+    ]
+  },
+  "in_distribution_test": {
+    "total_test": 369,
+    "overall_accuracy": 0.9946,
+    "confusion_matrix": [
+      [
+        101,
+        0,
+        0
+      ],
+      [
+        0,
+        155,
+        0
+      ],
+      [
+        2,
+        0,
+        111
+      ]
+    ],
+    "per_domain_metrics": {
+      "supported_rice": {
+        "support": 101,
+        "precision": 0.9806,
+        "recall": 1.0,
+        "specificity": 0.9925,
+        "f1_score": 0.9902,
+        "tp": 101,
+        "fp": 2,
+        "fn": 0
+      },
+      "supported_groundnut": {
+        "support": 155,
+        "precision": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "f1_score": 1.0,
+        "tp": 155,
+        "fp": 0,
+        "fn": 0
+      },
+      "unsupported_crop": {
+        "support": 113,
+        "precision": 1.0,
+        "recall": 0.9823,
+        "specificity": 1.0,
+        "f1_score": 0.9911,
+        "tp": 111,
+        "fp": 0,
+        "fn": 2
+      }
+    },
+    "rice_false_rejection_rate": 0.0,
+    "groundnut_false_rejection_rate": 0.0,
+    "unsupported_crop_false_acceptance_rate": 0.0177,
+    "unsupported_crop_breakdown": {
+      "cotton": {
+        "total": 53,
+        "correct_rejected_as_unsupported": 53,
+        "false_accepted_as_rice": 0,
+        "false_accepted_as_groundnut": 0
+      },
+      "cassava": {
+        "total": 30,
+        "correct_rejected_as_unsupported": 30,
+        "false_accepted_as_rice": 0,
+        "false_accepted_as_groundnut": 0
+      },
+      "corn": {
+        "total": 30,
+        "correct_rejected_as_unsupported": 28,
+        "false_accepted_as_rice": 2,
+        "false_accepted_as_groundnut": 0
+      }
+    }
+  },
+  "unseen_crop_test_tomato": {
+    "total_images": 100,
+    "correct_rejection_rate": 1.0,
+    "false_acceptance_rate": 0.0,
+    "leaked_rice": 0,
+    "leaked_groundnut": 0
+  },
+  "non_leaf_assets_evaluation": {
+    "total_assets": 5,
+    "results": [
+      {
+        "filename": "08_non_leaf_soil_and_tools.jpg",
+        "pred_domain": "unsupported_crop",
+        "pred_index": 2,
+        "probabilities": [
+          0.0021,
+          0.0017,
+          0.9962
+        ]
+      },
+      {
+        "filename": "10_low_confidence_dim_blurry.jpg",
+        "pred_domain": "supported_rice",
+        "pred_index": 0,
+        "probabilities": [
+          0.6438,
+          0.0766,
+          0.2795
+        ]
+      },
+      {
+        "filename": "background_not_a_leaf_train_00.jpg",
+        "pred_domain": "supported_rice",
+        "pred_index": 0,
+        "probabilities": [
+          0.7711,
+          0.1605,
+          0.0684
+        ]
+      },
+      {
+        "filename": "background_not_a_leaf_val_01.jpg",
+        "pred_domain": "supported_rice",
+        "pred_index": 0,
+        "probabilities": [
+          0.8073,
+          0.1193,
+          0.0734
+        ]
+      },
+      {
+        "filename": "background_not_a_leaf_test_02.jpg",
+        "pred_domain": "supported_rice",
+        "pred_index": 0,
+        "probabilities": [
+          0.7521,
+          0.1998,
+          0.0481
+        ]
+      }
+    ],
+    "note": "Non-leaf rejection is NOT claimed as validated; only 5 non-leaf images exist in the workspace."
+  },
+  "artifact_checksums_sha256": {
+    "best_model.pth": "222401a3641bb26be53bb3a3049691c70e7914a3bbf0ea671e1335520411179c",
+    "model_traced_fp32.pt": "1ffb5608b6d9f69a40f20ee2c94edc0c27ee8d92a14ff253630e88a9ec90b49b"
+  }
+}

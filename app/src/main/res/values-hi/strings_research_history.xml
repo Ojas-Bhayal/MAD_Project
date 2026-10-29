@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="research_history_heading">प्रयोगात्मक स्कैन इतिहास (केवल शोध)</string>
+    <string name="research_history_badge">प्रयोगात्मक • सत्यापित नहीं</string>
+    <string name="research_history_result_detail">अंशांकित न किया गया स्कोर: %1$d%% • समय: %2$d ms</string>
+    <string name="research_history_no_prediction">इस स्कैन के लिए कोई परिणाम स्वीकार नहीं किया गया।</string>
+    <string name="research_history_detail_dialog">फसल: %1$s
+परिणाम/स्थिति: %2$s
+अंशांकित न किया गया मॉडल स्कोर: %3$d%%
+समय: %4$s
+
+%5$s
+
+यह स्थानीय प्रयोगात्मक रिकॉर्ड है, सत्यापित निदान नहीं।</string>
+<string name="research_history_nonresult_dialog">फसल: %1$s\nस्थिति: %2$s\nसमय: %3$s\n\n%4$s\n\nयह स्थानीय प्रयोगात्मक रिकॉर्ड है, सत्यापित निदान नहीं।</string>
+</resources>

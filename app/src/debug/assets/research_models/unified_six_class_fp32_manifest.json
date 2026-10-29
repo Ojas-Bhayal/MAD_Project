@@ -1,0 +1,40 @@
+{
+  "model_id": "unified_six_class_fp32",
+  "model_version": "0.1.0-model-bundle",
+  "research_only": true,
+  "sha256": "1d3b8b2773c3b0580d77e54419a99f594c0ef21f04a8b098f22f6f756938bb96",
+  "input_shape": [
+    1,
+    3,
+    224,
+    224
+  ],
+  "input_dtype": "float32",
+  "output_shape": [
+    1,
+    6
+  ],
+  "output_dtype": "float32",
+  "class_order": [
+    "rice_bacterial_leaf_blight",
+    "rice_brown_spot",
+    "rice_leaf_blast",
+    "rice_healthy",
+    "groundnut_early_leaf_spot",
+    "groundnut_healthy"
+  ],
+  "input_layout": "NCHW",
+  "normalization": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "warning": "Six-class model bundle component. Scores are uncalibrated and field diagnosis validation is not established."
+}

@@ -1,0 +1,26 @@
+{
+  "formats": {
+    "fp32_torchscript": {
+      "path": "model_traced_fp32.pt",
+      "size_bytes": 6509269,
+      "size_mb": 6.21,
+      "cpu_latency_ms": 4.73,
+      "accuracy": 0.9844
+    },
+    "int8_dynamic_quantized": {
+      "path": "model_quantized_int8.pt",
+      "size_bytes": 4735046,
+      "size_mb": 4.52,
+      "cpu_latency_ms": 6.54,
+      "accuracy": 0.9844
+    },
+    "fp16_weights": {
+      "path": "model_fp16.pth",
+      "size_bytes": 3153157,
+      "size_mb": 3.01
+    }
+  },
+  "int8_fp32_agreement": 1.0,
+  "int8_accuracy_regression": 0.0,
+  "tflite_toolchain_status": "TensorFlow / TFLite runtime wheels not natively published for Python 3.14.7 runtime. PyTorch mobile runtime formats (TorchScript FP32 and INT8) successfully exported and benchmarked."
+}

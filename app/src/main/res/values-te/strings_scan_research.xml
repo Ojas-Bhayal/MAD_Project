@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_research_banner">AI పంట స్కాన్ — ప్రాథమిక మోడల్ ఫలితం. స్కాన్‌కు ముందు సరైన పంటను ఎంచుకోండి. పరీక్ష చిత్రాల కోసం స్క్రీన్‌ను ఫోటో తీయకుండా గ్యాలరీలోని అసలు చిత్రాన్ని ఎంచుకోండి.</string>
+    <string name="scan_research_crop_selector_description">ఈ స్కాన్ కోసం పంట మోడల్‌ను ఎంచుకోండి</string>
+    <string name="scan_research_capture_button">ఆకు ఫోటో తీసి అంచనా వేయండి</string>
+    <string name="scan_research_gallery_button">గ్యాలరీ నుండి ఆకు ఫోటో ఎంచుకోండి</string>
+    <string name="scan_research_choose_crop_first">స్కాన్ చేయడానికి ముందు సరైన పంటను ఎంచుకోండి. మోడల్ రన్ చేయలేదు.</string>
+    <string-array name="scan_research_crop_options">
+                <item>— సరైన పంటను ఎంచుకోండి —</item>
+<item>వరి (4-తరగతి పైలట్)</item>
+        <item>వేరుశనగ (2-తరగతి పైలట్)</item>
+        <item>పత్తి (2-తరగతి పైలట్)</item>
+    </string-array>
+    <string name="scan_research_result_title">AI మోడల్ అంచనా — ప్రాథమిక ఫలితం</string>
+    <string name="scan_research_result_body">ఎంచుకున్న పంట: %1$s\nమోడల్ ఫలితం: %2$s\nకాలిబ్రేట్ చేయని మోడల్ స్కోరు: %3$d%%\nఇన్ఫరెన్స్ సమయం: %4$d ms</string>
+    <string name="scan_research_result_disclaimer">ఇది ప్రయోగాత్మక మోడల్ ఫలితం మాత్రమే; ధృవీకరించబడిన ప్రొడక్షన్ నిర్ధారణ కాదు. స్కోర్లు కాలిబ్రేట్ చేయబడలేదు మరియు తప్పు కావచ్చు. ఫలితాలు స్థానిక ప్రయోగాత్మక స్కాన్ చరిత్రలో మాత్రమే సేవ్ అవుతాయి; ధృవీకరించిన నిర్ధారణలుగా సేవ్ కావు. చికిత్స సలహా ఇవ్వబడదు, ఈ రికార్డులు Firestore‌కు సింక్ కావు.</string>
+    <string name="scan_research_unavailable_title">ఎంచుకున్న పంట మోడల్ అందుబాటులో లేదు</string>
+    <string name="scan_research_rejected_title">ఏ అంచనా ఆమోదించబడలేదు</string>
+    <string name="scan_research_error_title">స్కాన్‌ను మూల్యాంకనం చేయలేకపోయాం</string>
+    <string name="scan_research_no_result_message">ఎంచుకున్న పంట మోడల్ ఉపయోగకరమైన ఫలితాన్ని ఇవ్వలేదు. నిర్ధారణ సేవ్ చేయబడలేదు.</string>
+    <string name="scan_crop_rice">వరి</string>
+    <string name="scan_crop_groundnut">వేరుశనగ</string>
+    <string name="scan_crop_cotton">పత్తి</string>
+    <string name="scan_class_cotton_bacterial_blight">పత్తి బాక్టీరియల్ బ్లైట్ (పైలట్ లేబుల్)</string>
+    <string name="scan_class_cotton_healthy">ఆరోగ్యకరమైన పత్తి (పైలట్ లేబుల్)</string>
+</resources>

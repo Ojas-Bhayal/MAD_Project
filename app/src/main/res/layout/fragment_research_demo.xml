@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_medium">
+
+        <!-- Runtime Model Status Card (Shown if Native TFLite unavailable or in release) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_models_unavailable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/surface_card"
+            app:cardCornerRadius="@dimen/radius_medium"
+            app:strokeColor="@color/error_red"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:id="@+id/txt_models_unavailable"
+                style="@style/TextAppearance.CropDoc.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_small"
+                android:text="@string/research_models_unavailable_warning"
+                android:textColor="@color/error_red" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Main Research Content Container -->
+        <LinearLayout
+            android:id="@+id/layout_research_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Persistent Experimental Disclaimer Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                app:cardBackgroundColor="@color/secondary_container"
+                app:cardCornerRadius="@dimen/radius_medium"
+                app:strokeColor="@color/outline_subtle"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium">
+
+                    <TextView
+                        style="@style/TextAppearance.CropDoc.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/research_disclaimer_title"
+                        android:textColor="@color/on_secondary_container" />
+
+                    <TextView
+                        style="@style/TextAppearance.CropDoc.Caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:text="@string/research_disclaimer_body_cotton"
+                        android:textColor="@color/on_secondary_container" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Debug-only model selector: existing rice/groundnut pipeline or separate cotton pilot. -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                app:cardBackgroundColor="@color/surface_card"
+                app:cardCornerRadius="@dimen/radius_medium"
+                app:strokeColor="@color/outline_subtle"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium">
+
+                    <TextView
+                        style="@style/TextAppearance.CropDoc.SectionTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/research_mode_heading" />
+
+                    <com.google.android.material.button.MaterialButtonToggleGroup
+                        android:id="@+id/research_mode_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        app:singleSelection="true"
+                        app:selectionRequired="true"
+                        app:checkedButton="@id/btn_mode_six_class">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_mode_six_class"
+                            style="@style/Widget.CropDoc.Button.Outlined"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checkable="true"
+                            android:text="@string/research_mode_six_class" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_mode_cotton_pilot"
+                            style="@style/Widget.CropDoc.Button.Outlined"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checkable="true"
+                            android:text="@string/research_mode_cotton_pilot" />
+                    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                    <TextView
+                        style="@style/TextAppearance.CropDoc.Caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xs"
+                        android:text="@string/research_mode_help" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Image Input & Preview Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                app:cardBackgroundColor="@color/surface_card"
+                app:cardCornerRadius="@dimen/radius_medium"
+                app:strokeColor="@color/outline_subtle"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium">
+
+                    <FrameLayout
+                        android:layout_width="224dp"
+                        android:layout_height="224dp"
+                        android:background="@color/surface_card">
+
+                        <ImageView
+                            android:id="@+id/img_research_preview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/cd_camera_preview"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:id="@+id/txt_preview_placeholder"
+                            style="@style/TextAppearance.CropDoc.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="@dimen/spacing_small"
+                            android:text="@string/research_preview_placeholder" />
+
+                        <ProgressBar
+                            android:id="@+id/progress_research"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="gone" />
+                    </FrameLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_capture_research_photo"
+                        style="@style/Widget.CropDoc.Button.Primary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:text="@string/btn_capture_research_photo" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_pick_research_image"
+                        style="@style/Widget.CropDoc.Button.Outlined"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:text="@string/btn_pick_research_image" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_sample_rice"
+                            style="@style/Widget.CropDoc.Button.Outlined"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/spacing_xs"
+                            android:layout_weight="1"
+                            android:text="@string/btn_sample_rice" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_sample_soil"
+                            style="@style/Widget.CropDoc.Button.Outlined"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing_xs"
+                            android:layout_weight="1"
+                            android:text="@string/btn_sample_soil" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_run_research_inference"
+                        style="@style/Widget.CropDoc.Button.Tonal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:enabled="false"
+                        android:text="@string/btn_run_research_inference" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Research Error Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_research_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/surface_card"
+                app:cardCornerRadius="@dimen/radius_medium"
+                app:strokeColor="@color/error_red"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium">
+
+                    <TextView
+                        android:id="@+id/txt_research_error_title"
+                        style="@style/TextAppearance.CropDoc.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/research_error_title"
+                        android:textColor="@color/error_red" />
+
+                    <TextView
+                        android:id="@+id/txt_research_error_message"
+                        style="@style/TextAppearance.CropDoc.Body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xs"
+                        android:textIsSelectable="true" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_retry_research"
+                        style="@style/Widget.CropDoc.Button.Outlined"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:text="@string/btn_retry_research" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Cotton binary research result: intentionally separate from calibrated six-class policy output. -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_cotton_research_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/surface_card"
+                app:cardCornerRadius="@dimen/radius_medium"
+                app:strokeColor="@color/outline_subtle"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium">
+
+                    <TextView
+                        style="@style/TextAppearance.CropDoc.Headline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/research_cotton_pilot_result_title"
+                        android:textColor="@color/on_surface_text" />
+
+                    <TextView
+                        android:id="@+id/txt_cotton_pilot_result"
+                        style="@style/TextAppearance.CropDoc.SectionTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:textIsSelectable="true" />
+
+                    <TextView
+                        android:id="@+id/txt_cotton_pilot_score"
+                        style="@style/TextAppearance.CropDoc.Body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xs"
+                        android:textIsSelectable="true" />
+
+                    <TextView
+                        android:id="@+id/txt_cotton_pilot_disclaimer"
+                        style="@style/TextAppearance.CropDoc.Caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:textColor="@color/error_red"
+                        android:textIsSelectable="true" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Pipeline Results Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/surface_card"
+                app:cardCornerRadius="@dimen/radius_medium"
+                app:strokeColor="@color/outline_subtle"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium">
+
+                    <TextView
+                        style="@style/TextAppearance.CropDoc.Headline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/research_card_results_title"
+                        android:textColor="@color/primary_green" />
+
+                    <!-- Stage 1 -->
+                    <TextView
+                        style="@style/TextAppearance.CropDoc.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:text="@string/research_stage_quality_hdr" />
+
+                    <TextView
+                        android:id="@+id/txt_quality_status"
+                        style="@style/TextAppearance.CropDoc.Body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textIsSelectable="true" />
+
+                    <!-- Stage 2 -->
+                    <TextView
+                        style="@style/TextAppearance.CropDoc.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:text="@string/research_stage_foliar_hdr" />
+
+                    <TextView
+                        android:id="@+id/txt_foliar_status"
+                        style="@style/TextAppearance.CropDoc.Body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textIsSelectable="true" />
+
+                    <!-- Stage 3 -->
+                    <TextView
+                        style="@style/TextAppearance.CropDoc.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:text="@string/research_stage_domain_hdr" />
+
+                    <TextView
+                        android:id="@+id/txt_domain_status"
+                        style="@style/TextAppearance.CropDoc.Body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textIsSelectable="true" />
+
+                    <!-- Stage 4 -->
+                    <TextView
+                        style="@style/TextAppearance.CropDoc.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:text="@string/research_stage_disease_hdr" />
+
+                    <TextView
+                        android:id="@+id/txt_disease_status"
+                        style="@style/TextAppearance.CropDoc.Body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textIsSelectable="true" />
+
+                    <!-- Stage 5 -->
+                    <TextView
+                        style="@style/TextAppearance.CropDoc.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:text="@string/research_stage_decision_hdr" />
+
+                    <TextView
+                        android:id="@+id/txt_decision_status"
+                        style="@style/TextAppearance.CropDoc.Headline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textIsSelectable="true" />
+
+                    <TextView
+                        android:id="@+id/txt_decision_explanation"
+                        style="@style/TextAppearance.CropDoc.Body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xs"
+                        android:textIsSelectable="true" />
+
+                    <!-- Latency Summary -->
+                    <TextView
+                        style="@style/TextAppearance.CropDoc.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:text="@string/research_latency_summary_hdr" />
+
+                    <TextView
+                        android:id="@+id/txt_latency_summary"
+                        style="@style/TextAppearance.CropDoc.Caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textIsSelectable="true" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Taxonomy Reference Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_large"
+                app:cardBackgroundColor="@color/surface_card"
+                app:cardCornerRadius="@dimen/radius_medium"
+                app:strokeColor="@color/outline_subtle"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium">
+
+                    <TextView
+                        style="@style/TextAppearance.CropDoc.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/research_taxonomy_title" />
+
+                    <TextView
+                        style="@style/TextAppearance.CropDoc.Caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xs"
+                        android:text="@string/research_taxonomy_content"
+                        android:textIsSelectable="true" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

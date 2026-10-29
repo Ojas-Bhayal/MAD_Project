@@ -1,0 +1,664 @@
+{
+  "experiment_name": "cotton_binary_pilot",
+  "timestamp": "2026-10-24 03:24:26",
+  "model_architecture": "mobilenet_v3_small",
+  "checkpoint_sha256": "cc1fbcebaa3a80659da42905bcbdf548df4fd81815701de82ff4a9006077b33c",
+  "checkpoint_file": "best_model.pt",
+  "random_seed": 42,
+  "environment": {
+    "python_version": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "cpu_count": 12,
+    "torch_version": "2.14.1+cpu",
+    "cuda_available_in_torch": false,
+    "device_used": "cpu",
+    "gpu_detected_via_smi": true,
+    "gpu_details": {
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory": "6141 MiB",
+      "driver_version": "621.01"
+    },
+    "blocker_explanation": "An NVIDIA GPU is physically present (RTX 4050 Laptop GPU, 6GB VRAM), but the active Python environment is Python 3.14.7. Official PyTorch binary wheels with CUDA acceleration are not published for Windows on Python 3.14. PyPI only provides CPU-only builds (torch==2.14.1+cpu). Executing experiment on CPU using multi-threaded PyTorch execution fallback as instructed."
+  },
+  "hyperparameters": {
+    "num_epochs": 20,
+    "batch_size": 16,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "early_stopping_patience": 5,
+    "input_resolution": "224x224",
+    "pretrained_weights": "ImageNet-1K (MobileNet_V3_Small_Weights.DEFAULT)"
+  },
+  "dataset_split": {
+    "train_samples": 252,
+    "val_samples": 54,
+    "test_samples": 53,
+    "split_file": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\splits\\split_mendeley_cotton_2025.json"
+  },
+  "best_epoch": 17,
+  "best_val_loss": 3.4776895964333324e-05,
+  "test_metrics": {
+    "total_samples": 53,
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "macro_f1": 1.0,
+    "confusion_matrix": {
+      "c0_bacterial_true": {
+        "pred_bacterial": 27,
+        "pred_healthy": 0
+      },
+      "c1_healthy_true": {
+        "pred_bacterial": 0,
+        "pred_healthy": 26
+      }
+    },
+    "confusion_matrix_grid": [
+      [
+        27,
+        0
+      ],
+      [
+        0,
+        26
+      ]
+    ],
+    "class_0_cotton_bacterial_blight": {
+      "support": 27,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "class_1_cotton_healthy": {
+      "support": 26,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    }
+  },
+  "test_predictions": [
+    {
+      "image_id": "60abd350a3b2dc51",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(87).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.9999996423721313,
+      "prob_healthy": 3.8837453075757367e-07,
+      "is_correct": true
+    },
+    {
+      "image_id": "968306c9e8851b45",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(79).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.999998927116394,
+      "prob_healthy": 1.084270593310066e-06,
+      "is_correct": true
+    },
+    {
+      "image_id": "db40ae912a0ed267",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(8).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.999961256980896,
+      "prob_healthy": 3.874396134051494e-05,
+      "is_correct": true
+    },
+    {
+      "image_id": "649a14232d2ea496",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(4).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.9999501705169678,
+      "prob_healthy": 4.982445898349397e-05,
+      "is_correct": true
+    },
+    {
+      "image_id": "628c21275de68294",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(107).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 1.0,
+      "prob_healthy": 6.0675731106130115e-09,
+      "is_correct": true
+    },
+    {
+      "image_id": "7f49f70084afb371",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(5).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.9999948740005493,
+      "prob_healthy": 5.095527285448043e-06,
+      "is_correct": true
+    },
+    {
+      "image_id": "aec3d91fceaf5d79",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(30).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.9999843835830688,
+      "prob_healthy": 1.5651787180104293e-05,
+      "is_correct": true
+    },
+    {
+      "image_id": "bb80b49ff9cb4880",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(51).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.9999969005584717,
+      "prob_healthy": 3.048304279218428e-06,
+      "is_correct": true
+    },
+    {
+      "image_id": "afc5933b6492bd8d",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(33).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.999972939491272,
+      "prob_healthy": 2.707283965719398e-05,
+      "is_correct": true
+    },
+    {
+      "image_id": "ec401781768ab175",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(44).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.999998927116394,
+      "prob_healthy": 1.052674519996799e-06,
+      "is_correct": true
+    },
+    {
+      "image_id": "4206a983ffae1d1e",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(126).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.9999994039535522,
+      "prob_healthy": 6.012869562255219e-07,
+      "is_correct": true
+    },
+    {
+      "image_id": "a042abf0ae877f2c",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(197).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.999991774559021,
+      "prob_healthy": 8.262843948614318e-06,
+      "is_correct": true
+    },
+    {
+      "image_id": "7a4d3a22e94d0c06",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(108).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.9999998807907104,
+      "prob_healthy": 1.4698643724386784e-07,
+      "is_correct": true
+    },
+    {
+      "image_id": "c0da3c4c97374187",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(164).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.999998927116394,
+      "prob_healthy": 1.015375460156065e-06,
+      "is_correct": true
+    },
+    {
+      "image_id": "76e903a6d8728ce9",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(31).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.9993900060653687,
+      "prob_healthy": 0.0006099824677221477,
+      "is_correct": true
+    },
+    {
+      "image_id": "8e2cacd25f1a8b38",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(149).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.999997615814209,
+      "prob_healthy": 2.343475898669567e-06,
+      "is_correct": true
+    },
+    {
+      "image_id": "dfc0771b3827fa85",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(152).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.999997615814209,
+      "prob_healthy": 2.341295612495742e-06,
+      "is_correct": true
+    },
+    {
+      "image_id": "9cc51c9790fdb72c",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(26).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.9996656179428101,
+      "prob_healthy": 0.00033440577681176364,
+      "is_correct": true
+    },
+    {
+      "image_id": "e7c0e9d388dca2ee",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(144).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.9945264458656311,
+      "prob_healthy": 0.005473587196320295,
+      "is_correct": true
+    },
+    {
+      "image_id": "a6864928cb70ee1d",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(89).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.9999940395355225,
+      "prob_healthy": 5.987827989883954e-06,
+      "is_correct": true
+    },
+    {
+      "image_id": "673e413305fd007a",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(45).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.9999986886978149,
+      "prob_healthy": 1.3132340654919972e-06,
+      "is_correct": true
+    },
+    {
+      "image_id": "8725df8bb095df06",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(154).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.9999938011169434,
+      "prob_healthy": 6.14187183600734e-06,
+      "is_correct": true
+    },
+    {
+      "image_id": "1a481b95eef7a0dd",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(160).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.9999988079071045,
+      "prob_healthy": 1.2180519206594909e-06,
+      "is_correct": true
+    },
+    {
+      "image_id": "7bf142acd3e7bdd3",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(36).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 1.0,
+      "prob_healthy": 2.7390679946392993e-08,
+      "is_correct": true
+    },
+    {
+      "image_id": "35fa6aa05a1fffb7",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(128).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 1.0,
+      "prob_healthy": 1.498974278035803e-08,
+      "is_correct": true
+    },
+    {
+      "image_id": "772eec48e8f20349",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(17).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.9999973773956299,
+      "prob_healthy": 2.5852284579741536e-06,
+      "is_correct": true
+    },
+    {
+      "image_id": "ad6254ab6b28bb81",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_bacterial_blight/bacterial_(13).jpg",
+      "true_label_idx": 0,
+      "true_label_name": "cotton_bacterial_blight",
+      "pred_label_idx": 0,
+      "pred_label_name": "cotton_bacterial_blight",
+      "prob_bacterial_blight": 0.9999877214431763,
+      "prob_healthy": 1.2311247701290995e-05,
+      "is_correct": true
+    },
+    {
+      "image_id": "68203ee76c67b699",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(35).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 6.449113811868301e-07,
+      "prob_healthy": 0.9999994039535522,
+      "is_correct": true
+    },
+    {
+      "image_id": "007d7bc7932f36df",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(273).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 9.733275163625876e-08,
+      "prob_healthy": 0.9999998807907104,
+      "is_correct": true
+    },
+    {
+      "image_id": "8b6e3f553bbf733c",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(7).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 3.559312631296052e-07,
+      "prob_healthy": 0.9999996423721313,
+      "is_correct": true
+    },
+    {
+      "image_id": "b3f37816be2a65a8",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(175).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 3.615797652400943e-07,
+      "prob_healthy": 0.9999996423721313,
+      "is_correct": true
+    },
+    {
+      "image_id": "730622f6c809a25f",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(238).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 3.622016890858504e-07,
+      "prob_healthy": 0.9999996423721313,
+      "is_correct": true
+    },
+    {
+      "image_id": "cd2c9177ac8ca236",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(197).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 9.548673460813006e-07,
+      "prob_healthy": 0.9999990463256836,
+      "is_correct": true
+    },
+    {
+      "image_id": "b9e6fdfbbafd7c7e",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(27).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 2.97669703286374e-06,
+      "prob_healthy": 0.9999970197677612,
+      "is_correct": true
+    },
+    {
+      "image_id": "c71a8f18cd34f3bd",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(264).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 3.6241806355974404e-06,
+      "prob_healthy": 0.9999964237213135,
+      "is_correct": true
+    },
+    {
+      "image_id": "50476706e69b19a9",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(255).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 0.0004584531707223505,
+      "prob_healthy": 0.9995415210723877,
+      "is_correct": true
+    },
+    {
+      "image_id": "69b1775371ff7c8f",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(266).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 5.311750646797009e-05,
+      "prob_healthy": 0.9999468326568604,
+      "is_correct": true
+    },
+    {
+      "image_id": "b04fb8ee760249b8",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(6).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 7.775302606205514e-07,
+      "prob_healthy": 0.9999991655349731,
+      "is_correct": true
+    },
+    {
+      "image_id": "6aae323d7570d88f",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(20).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 1.3757568922301289e-05,
+      "prob_healthy": 0.9999862909317017,
+      "is_correct": true
+    },
+    {
+      "image_id": "2bfea7f408be6997",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(317).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 1.0000723023040337e-06,
+      "prob_healthy": 0.9999990463256836,
+      "is_correct": true
+    },
+    {
+      "image_id": "2eae825c57be9cd8",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(40).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 1.496145728197007e-06,
+      "prob_healthy": 0.9999984502792358,
+      "is_correct": true
+    },
+    {
+      "image_id": "4e2cf87291a1798a",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(257).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 1.3359284594116616e-06,
+      "prob_healthy": 0.9999986886978149,
+      "is_correct": true
+    },
+    {
+      "image_id": "68b0f19077847d32",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(147).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 8.221541492048345e-08,
+      "prob_healthy": 0.9999998807907104,
+      "is_correct": true
+    },
+    {
+      "image_id": "1de05f6c92ae2a0e",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(284).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 1.0824749097082531e-06,
+      "prob_healthy": 0.999998927116394,
+      "is_correct": true
+    },
+    {
+      "image_id": "e0780596ae052b48",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(122).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 6.855833021290891e-07,
+      "prob_healthy": 0.9999992847442627,
+      "is_correct": true
+    },
+    {
+      "image_id": "2329436d016fa7a4",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(110).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 1.406642553547499e-07,
+      "prob_healthy": 0.9999998807907104,
+      "is_correct": true
+    },
+    {
+      "image_id": "07ff1e9cee2837f2",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(235).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 9.143676606981899e-07,
+      "prob_healthy": 0.9999990463256836,
+      "is_correct": true
+    },
+    {
+      "image_id": "a408c9b84910b968",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(303).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 5.990015665702231e-07,
+      "prob_healthy": 0.9999994039535522,
+      "is_correct": true
+    },
+    {
+      "image_id": "8ee0f1a2b68fab59",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(144).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 1.8310489394934848e-05,
+      "prob_healthy": 0.9999816417694092,
+      "is_correct": true
+    },
+    {
+      "image_id": "ffd363fac87158dc",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(16).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 1.0243057886327733e-06,
+      "prob_healthy": 0.999998927116394,
+      "is_correct": true
+    },
+    {
+      "image_id": "435c7432cb9059b6",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(31).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 1.015414227367728e-06,
+      "prob_healthy": 0.999998927116394,
+      "is_correct": true
+    },
+    {
+      "image_id": "7776b0a376363fca",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(129).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 6.006020214499586e-08,
+      "prob_healthy": 0.9999998807907104,
+      "is_correct": true
+    },
+    {
+      "image_id": "5b5b295057fdbb36",
+      "staged_path": "data/staged/mendeley_cotton_2025/cotton_healthy/healthy_(38).jpg",
+      "true_label_idx": 1,
+      "true_label_name": "cotton_healthy",
+      "pred_label_idx": 1,
+      "pred_label_name": "cotton_healthy",
+      "prob_bacterial_blight": 7.245525011967402e-06,
+      "prob_healthy": 0.9999927282333374,
+      "is_correct": true
+    }
+  ]
+}

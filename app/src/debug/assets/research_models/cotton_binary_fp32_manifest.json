@@ -1,0 +1,46 @@
+{
+  "model_id": "cotton_binary_fp32",
+  "model_version": "0.1.0-research",
+  "research_only": true,
+  "production_approval": "BLOCKED",
+  "diagnostic_status": "UNVALIDATED_PILOT (UNREVIEWED_SOURCE_LABELS)",
+  "checkpoint_sha256": "cc1fbcebaa3a80659da42905bcbdf548df4fd81815701de82ff4a9006077b33c",
+  "sha256": "f2444f3a5791bf6cfccb2280906aed44ddf73f0e9a54af433c1148356263db3a",
+  "input_shape": [
+    1,
+    3,
+    224,
+    224
+  ],
+  "input_dtype": "float32",
+  "output_shape": [
+    1,
+    2
+  ],
+  "output_dtype": "float32",
+  "input_layout": "NCHW",
+  "class_order": [
+    "cotton_bacterial_blight",
+    "cotton_healthy"
+  ],
+  "normalization": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "conversion_check": {
+    "max_abs_logit_error": 1.8924474716186523e-06,
+    "tolerance": 0.05,
+    "synthetic_parity_cases": 8,
+    "synthetic_top1_matches": 8,
+    "synthetic_top1_match_is_not_accuracy": true
+  },
+  "warning": "Research-only cotton pilot. Source labels are not pathologist-certified. Not approved for production diagnosis or release."
+}

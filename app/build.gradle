@@ -1,0 +1,285 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.androidx.room)
+    alias(libs.plugins.navigation.safeargs)
+    id("checkstyle")
+}
+
+if (file("google-services.json").exists()) {
+    apply plugin: "com.google.gms.google-services"
+    apply plugin: "com.google.firebase.crashlytics"
+}
+
+android {
+    namespace = "com.cropdoc.app"
+    compileSdk = 37
+
+    defaultConfig {
+        applicationId = "com.cropdoc.app"
+        minSdk = 24
+        targetSdk = 37
+        versionCode = 1
+        versionName = "1.0.0"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        resConfigs 'en', 'hi', 'te'
+
+        ndk {
+            abiFilters('arm64-v8a', 'armeabi-v7a')
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled = false
+            ndk {
+                abiFilters('arm64-v8a', 'armeabi-v7a', 'x86_64')
+            }
+        }
+        release {
+            minifyEnabled = true
+            shrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
+
+    bundle {
+        language {
+            enableSplit = false
+        }
+        density {
+            enableSplit = true
+        }
+        abi {
+            enableSplit = true
+        }
+    }
+
+    androidResources {
+        noCompress 'tflite'
+    }
+
+    packaging {
+        resources {
+            excludes += [
+                "win32-x86*/**",
+                "**/attach_hotspot_windows.dll"
+            ]
+        }
+    }
+
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    lint {
+        abortOnError = true
+        warningsAsErrors = true
+        checkAllWarnings = true
+        lintConfig = rootProject.file("config/lint/lint.xml")
+    }
+    // CropDocDuplicateResearchAssetsFix: register each asset root exactly once.
+    sourceSets {
+        main {
+            assets.setSrcDirs([file("src/main/assets")])
+        }
+        debug {
+            assets.setSrcDirs([file("src/debug/assets")])
+        }
+    }
+}
+
+room {
+    schemaDirectory("$projectDir/schemas")
+}
+
+checkstyle {
+    toolVersion = libs.versions.checkstyle.get()
+    configFile = rootProject.file("config/checkstyle/checkstyle.xml")
+    ignoreFailures = false
+    maxWarnings = 0
+}
+
+tasks.register("checkstyle", Checkstyle) {
+    source("src/main/java", "src/test/java", "src/androidTest/java")
+    include("**/*.java")
+    classpath = files()
+}
+
+dependencies {
+    implementation(libs.androidx.core)
+    implementation(libs.androidx.annotation)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.fragment)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.exifinterface)
+    implementation(libs.google.material)
+
+    implementation(libs.camerax.core)
+    implementation(libs.camerax.camera2)
+    implementation(libs.camerax.lifecycle)
+    implementation(libs.camerax.view)
+
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
+
+    implementation(libs.room.runtime)
+    annotationProcessor(libs.room.compiler)
+
+    implementation(libs.work.runtime)
+
+    implementation(libs.lifecycle.viewmodel)
+    implementation(libs.lifecycle.livedata)
+    implementation(libs.lifecycle.runtime)
+    implementation(libs.lifecycle.common.java8)
+
+    implementation(libs.credentials.core)
+    implementation(libs.credentials.play.services)
+    implementation(libs.googleid)
+
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
+    implementation(libs.firebase.crashlytics)
+    implementation(libs.firebase.config)
+    implementation(libs.firebase.appcheck.playintegrity)
+    debugImplementation(libs.firebase.appcheck.debug)
+
+    implementation(libs.litert.core)
+    implementation(libs.glide.core)
+    implementation(libs.profileinstaller)
+    implementation(libs.guava)
+
+    // Optional developer memory profiling (commented out so companion 'Leaks' icon is hidden):
+    // debugImplementation(libs.leakcanary.android)
+
+    testImplementation(libs.junit)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.arch.core.testing)
+
+    androidTestImplementation(libs.androidx.test.core)
+    androidTestImplementation(libs.androidx.test.junit)
+    androidTestImplementation(libs.espresso.core)
+}
+
+tasks.register("validateBundledModelForRelease") {
+    description = "Validates the crop-specific TFLite model bundle used by the Scan camera/gallery pipeline."
+    def bundleDir = layout.projectDirectory.file("src/main/assets/research_models").asFile
+    def requiredModels = [
+        [name: "crop_domain_gate_fp32", file: new File(bundleDir, "crop_domain_gate_fp32.tflite"), manifestFile: new File(bundleDir, "crop_domain_gate_fp32_manifest.json"), sha: "a8c39823dbb1cbe5b81acccc65412c4a230283ee22539aec359602215be2fe3d", inputShape: [1, 3, 224, 224], outputShape: [1, 3], classOrder: ["rice", "groundnut", "unsupported_crop"]],
+        [name: "unified_six_class_fp32", file: new File(bundleDir, "unified_six_class_fp32.tflite"), manifestFile: new File(bundleDir, "unified_six_class_fp32_manifest.json"), sha: "1d3b8b2773c3b0580d77e54419a99f594c0ef21f04a8b098f22f6f756938bb96", inputShape: [1, 3, 224, 224], outputShape: [1, 6], classOrder: ["rice_bacterial_leaf_blight", "rice_brown_spot", "rice_leaf_blast", "rice_healthy", "groundnut_early_leaf_spot", "groundnut_healthy"]]
+    ]
+    inputs.files(requiredModels.collect { it.file } + requiredModels.collect { it.manifestFile })
+    doLast {
+        def inspectScript = layout.projectDirectory.file("../ml/scripts/inspect_tflite_graph.py").asFile
+        if (!inspectScript.exists()) {
+            throw new GradleException("Required TFLite graph inspector is missing: " + inspectScript)
+        }
+        requiredModels.each { spec ->
+            if (!spec.file.isFile()) {
+                throw new GradleException("Release build blocked: required Scan model is missing: " + spec.file)
+            }
+            if (!spec.manifestFile.isFile()) {
+                throw new GradleException("Release build blocked: model manifest is missing: " + spec.manifestFile)
+            }
+            if (spec.file.length() < 524288L) {
+                throw new GradleException("Scan model is too small (<512 KiB): " + spec.file)
+            }
+            byte[] header = new byte[8]
+            spec.file.withInputStream { stream -> stream.read(header) }
+            if (new String(header, 4, 4, "US-ASCII") != "TFL3") {
+                throw new GradleException("Invalid TFLite FlatBuffer header for " + spec.name)
+            }
+            def digest = java.security.MessageDigest.getInstance("SHA-256")
+            spec.file.withInputStream { stream ->
+                byte[] buffer = new byte[8192]
+                int count
+                while ((count = stream.read(buffer)) != -1) digest.update(buffer, 0, count)
+            }
+            String actualSha = digest.digest().collect { String.format("%02x", it) }.join()
+            if (!actualSha.equalsIgnoreCase(spec.sha)) {
+                throw new GradleException("Model SHA-256 mismatch for " + spec.name + ": " + actualSha)
+            }
+            def manifest = new groovy.json.JsonSlurper().parse(spec.manifestFile)
+            if (!actualSha.equalsIgnoreCase(manifest.sha256?.toString() ?: "")) {
+                throw new GradleException("Manifest SHA-256 mismatch for " + spec.name)
+            }
+            if (manifest.input_shape != spec.inputShape || manifest.output_shape != spec.outputShape) {
+                throw new GradleException("Manifest tensor shape mismatch for " + spec.name)
+            }
+            if (manifest.input_dtype?.toString() != "float32" || manifest.output_dtype?.toString() != "float32") {
+                throw new GradleException("Manifest tensor dtype mismatch for " + spec.name)
+            }
+            if (manifest.research_only != true || manifest.class_order != spec.classOrder
+                    || manifest.input_layout?.toString() != "NCHW") {
+                throw new GradleException("Model manifest status/class-order/layout mismatch for " + spec.name)
+            }
+            def stdout = new ByteArrayOutputStream()
+            def stderr = new ByteArrayOutputStream()
+            def result = exec {
+                commandLine "python", inspectScript.absolutePath, "--model", spec.file.absolutePath
+                standardOutput = stdout
+                errorOutput = stderr
+                ignoreExitValue = true
+            }
+            if (result.exitValue != 0) {
+                throw new GradleException("TFLite graph inspection failed for " + spec.name + ": " + stderr.toString())
+            }
+            def graph = new groovy.json.JsonSlurper().parseText(stdout.toString())
+            if (graph.input_shape != spec.inputShape || graph.output_shape != spec.outputShape
+                    || graph.input_dtype?.toString() != "float32" || graph.output_dtype?.toString() != "float32") {
+                throw new GradleException("Actual graph tensor contract mismatch for " + spec.name + ": " + graph)
+            }
+        }
+
+        // Cotton is optional until its already-trained checkpoint has been exported to TFLite.
+        // If either file is supplied, both are mandatory and all integrity checks run.
+        def cottonFile = new File(bundleDir, "cotton_binary_fp32.tflite")
+        def cottonManifestFile = new File(bundleDir, "cotton_binary_fp32_manifest.json")
+        if (cottonFile.exists() != cottonManifestFile.exists()) {
+            throw new GradleException("Cotton model bundle is incomplete: both cotton_binary_fp32.tflite and its manifest are required.")
+        }
+        if (cottonFile.exists()) {
+            if (cottonFile.length() < 524288L) throw new GradleException("Cotton TFLite model is too small (<512 KiB).")
+            byte[] h = new byte[8]; cottonFile.withInputStream { it.read(h) }
+            if (new String(h, 4, 4, "US-ASCII") != "TFL3") throw new GradleException("Invalid Cotton TFLite header.")
+            def md = java.security.MessageDigest.getInstance("SHA-256")
+            cottonFile.withInputStream { stream -> byte[] b = new byte[8192]; int n; while ((n = stream.read(b)) != -1) md.update(b, 0, n) }
+            String cottonSha = md.digest().collect { String.format("%02x", it) }.join()
+            def cottonManifest = new groovy.json.JsonSlurper().parse(cottonManifestFile)
+            if (!cottonSha.equalsIgnoreCase(cottonManifest.sha256?.toString() ?: "")) throw new GradleException("Cotton model manifest SHA-256 mismatch.")
+            if (cottonManifest.research_only != true || cottonManifest.production_approval != "BLOCKED"
+                    || cottonManifest.model_id?.toString() != "cotton_binary_fp32"
+                    || cottonManifest.model_version?.toString() != "0.1.0-research"
+                    || cottonManifest.input_shape != [1, 3, 224, 224] || cottonManifest.output_shape != [1, 2]
+                    || cottonManifest.input_dtype?.toString() != "float32"
+                    || cottonManifest.output_dtype?.toString() != "float32"
+                    || cottonManifest.input_layout?.toString() != "NCHW"
+                    || cottonManifest.class_order != ["cotton_bacterial_blight", "cotton_healthy"]
+                    || cottonManifest.checkpoint_sha256?.toString() != "cc1fbcebaa3a80659da42905bcbdf548df4fd81815701de82ff4a9006077b33c") {
+                throw new GradleException("Cotton model manifest/class/tensor contract mismatch.")
+            }
+            logger.lifecycle("Cotton model asset integrity passed; model outputs remain unvalidated pilot predictions.")
+        } else {
+            logger.warn("Cotton TFLite is not installed. Scan inference will work for Rice/Groundnut; Cotton selection will show a model-unavailable result until the model is exported and copied into main assets.")
+        }
+        logger.lifecycle("CropDoc Scan model bundle integrity checks passed for the installed models.")
+    }
+}
+
+tasks.matching { it.name == "preReleaseBuild" }.configureEach {
+    dependsOn("validateBundledModelForRelease")
+}
+
+

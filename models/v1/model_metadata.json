@@ -1,0 +1,41 @@
+{
+  "modelName": "cropdoc_leaf_mobilenetv3_large_int8",
+  "modelVersion": "1.0.0-int8",
+  "litertRuntimeVersion": "2.3.0",
+  "sha256": "e5591b7019326089c54400842b74447f341441c7e51e1e9a068f3fe898fd57b8",
+  "inputShape": [
+    1,
+    224,
+    224,
+    3
+  ],
+  "inputDataType": "UINT8",
+  "outputShape": [
+    1,
+    16
+  ],
+  "outputDataType": "FLOAT32_CALIBRATED",
+  "temperatureScale": 1.45,
+  "confidenceThreshold": 0.65,
+  "maxNormalizedEntropy": 0.55,
+  "minLeafPixelRatio": 0.18,
+  "classes": [
+    "rice_bacterial_leaf_blight",
+    "rice_brown_spot",
+    "rice_leaf_blast",
+    "rice_healthy",
+    "tomato_early_blight",
+    "tomato_late_blight",
+    "tomato_yellow_leaf_curl_virus",
+    "tomato_healthy",
+    "potato_early_blight",
+    "potato_late_blight",
+    "potato_healthy",
+    "cotton_bacterial_blight",
+    "cotton_healthy",
+    "maize_common_rust",
+    "maize_northern_leaf_blight",
+    "background_not_a_leaf"
+  ],
+  "fileSizeBytes": 16800
+}

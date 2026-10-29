@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_research_banner">AI CROP SCAN — preliminary model output. Choose the actual crop before scanning. For test photos, choose the original image in Gallery rather than photographing a screen.</string>
+    <string name="scan_research_crop_selector_description">Choose the crop model for this scan</string>
+    <string name="scan_research_capture_button">Capture Leaf &amp; Predict</string>
+    <string name="scan_research_gallery_button">Choose Leaf Photo</string>
+    <string name="scan_research_choose_crop_first">Choose the actual crop before scanning. No model was run.</string>
+    <string-array name="scan_research_crop_options">
+                <item>— Select actual crop —</item>
+<item>Rice (4-class pilot)</item>
+        <item>Groundnut (2-class pilot)</item>
+        <item>Cotton (2-class pilot)</item>
+    </string-array>
+    <string name="scan_research_result_title">AI model prediction — preliminary result</string>
+    <string name="scan_research_result_body">Selected crop: %1$s\nModel output: %2$s\nUncalibrated model score: %3$d%%\nInference time: %4$d ms</string>
+    <string name="scan_research_result_disclaimer">This is the current model output, not a field-validated diagnosis. The score is uncalibrated and may be wrong; it is not a verified disease probability. Do not use this result alone to make crop-treatment or chemical-spray decisions. Results are saved only to local Experimental Scan History and are not saved as verified diagnoses. No treatment advice is generated and these records are not synced to Firestore.</string>
+    <string name="scan_research_unavailable_title">Selected crop model unavailable</string>
+    <string name="scan_research_rejected_title">No prediction accepted</string>
+    <string name="scan_research_error_title">Scan could not be evaluated</string>
+    <string name="scan_research_no_result_message">The selected crop model did not produce a usable result. No diagnosis was saved.</string>
+    <string name="scan_crop_rice">Rice</string>
+    <string name="scan_crop_groundnut">Groundnut</string>
+    <string name="scan_crop_cotton">Cotton</string>
+    <string name="scan_class_cotton_bacterial_blight">Cotton bacterial blight (pilot label)</string>
+    <string name="scan_class_cotton_healthy">Cotton healthy (pilot label)</string>
+</resources>

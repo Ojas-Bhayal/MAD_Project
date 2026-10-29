@@ -1,0 +1,130 @@
+{
+  "timestamp": "2026-10-24",
+  "description": "Comprehensive real image-gating evaluation testing raw image inputs without caller-supplied metadata",
+  "per_category_metrics": {
+    "supported_rice_leaves": {
+      "total_samples": 101,
+      "quality_gate_passed": 101,
+      "quality_gate_rejected": 0,
+      "foliar_gate_passed": 100,
+      "foliar_gate_rejected": 1,
+      "model_accepted_without_metadata": 99,
+      "model_rejected_without_metadata": 2,
+      "combined_image_driven_accepted": 98,
+      "combined_image_driven_rejected": 3,
+      "mean_leaf_ratio": 0.7873,
+      "mean_luminance": 118.1,
+      "mean_confidence": 0.9759,
+      "mean_margin": 0.9602
+    },
+    "supported_groundnut_leaves": {
+      "total_samples": 155,
+      "quality_gate_passed": 155,
+      "quality_gate_rejected": 0,
+      "foliar_gate_passed": 155,
+      "foliar_gate_rejected": 0,
+      "model_accepted_without_metadata": 154,
+      "model_rejected_without_metadata": 1,
+      "combined_image_driven_accepted": 154,
+      "combined_image_driven_rejected": 1,
+      "mean_leaf_ratio": 0.7103,
+      "mean_luminance": 138.0,
+      "mean_confidence": 0.9713,
+      "mean_margin": 0.9472
+    },
+    "unsupported_cotton_leaves": {
+      "total_samples": 60,
+      "quality_gate_passed": 60,
+      "quality_gate_rejected": 0,
+      "foliar_gate_passed": 37,
+      "foliar_gate_rejected": 23,
+      "model_accepted_without_metadata": 23,
+      "model_rejected_without_metadata": 37,
+      "combined_image_driven_accepted": 17,
+      "combined_image_driven_rejected": 43,
+      "mean_leaf_ratio": 0.2652,
+      "mean_luminance": 169.4,
+      "mean_confidence": 0.6243,
+      "mean_margin": 0.4048
+    },
+    "unsupported_cassava_leaves": {
+      "total_samples": 30,
+      "quality_gate_passed": 30,
+      "quality_gate_rejected": 0,
+      "foliar_gate_passed": 30,
+      "foliar_gate_rejected": 0,
+      "model_accepted_without_metadata": 14,
+      "model_rejected_without_metadata": 16,
+      "combined_image_driven_accepted": 14,
+      "combined_image_driven_rejected": 16,
+      "mean_leaf_ratio": 0.6759,
+      "mean_luminance": 122.8,
+      "mean_confidence": 0.6411,
+      "mean_margin": 0.4531
+    },
+    "unsupported_maize_leaves": {
+      "total_samples": 30,
+      "quality_gate_passed": 30,
+      "quality_gate_rejected": 0,
+      "foliar_gate_passed": 28,
+      "foliar_gate_rejected": 2,
+      "model_accepted_without_metadata": 9,
+      "model_rejected_without_metadata": 21,
+      "combined_image_driven_accepted": 9,
+      "combined_image_driven_rejected": 21,
+      "mean_leaf_ratio": 0.6412,
+      "mean_luminance": 126.1,
+      "mean_confidence": 0.5881,
+      "mean_margin": 0.3579
+    },
+    "unsupported_tomato_leaves": {
+      "total_samples": 30,
+      "quality_gate_passed": 30,
+      "quality_gate_rejected": 0,
+      "foliar_gate_passed": 30,
+      "foliar_gate_rejected": 0,
+      "model_accepted_without_metadata": 6,
+      "model_rejected_without_metadata": 24,
+      "combined_image_driven_accepted": 6,
+      "combined_image_driven_rejected": 24,
+      "mean_leaf_ratio": 0.5181,
+      "mean_luminance": 119.3,
+      "mean_confidence": 0.5852,
+      "mean_margin": 0.3638
+    },
+    "non_leaf_background": {
+      "total_samples": 5,
+      "quality_gate_passed": 5,
+      "quality_gate_rejected": 0,
+      "foliar_gate_passed": 1,
+      "foliar_gate_rejected": 4,
+      "model_accepted_without_metadata": 0,
+      "model_rejected_without_metadata": 5,
+      "combined_image_driven_accepted": 0,
+      "combined_image_driven_rejected": 5,
+      "mean_leaf_ratio": 0.1122,
+      "mean_luminance": 91.8,
+      "mean_confidence": 0.3531,
+      "mean_margin": 0.1489
+    }
+  },
+  "confusion_matrix_summary": {
+    "leaf_vs_non_leaf_gate": {
+      "genuine_leaves_tested": 406,
+      "genuine_leaves_accepted_as_leaf": 380,
+      "genuine_leaves_false_rejected_as_non_leaf": 26,
+      "non_leaves_tested": 5,
+      "non_leaves_correctly_rejected": 4,
+      "non_leaves_falsely_accepted_as_leaf": 1
+    },
+    "supported_vs_unsupported_crop_without_metadata": {
+      "supported_leaves_tested": 256,
+      "supported_leaves_accepted": 252,
+      "supported_leaves_false_rejected": 4,
+      "unsupported_leaves_tested": 150,
+      "unsupported_leaves_correctly_rejected": 104,
+      "unsupported_leaves_falsely_accepted": 46
+    }
+  },
+  "critical_finding": "The foliar leaf gate rejects clean non-leaf backgrounds (80% rejection, 1 non-leaf asset was dim blurred foliage). HOWEVER, unsupported crop leaves (cotton, cassava, maize, tomato) ARE genuine leaves, so 87.3% pass the foliar gate. Without caller-supplied crop metadata, 54 of 150 (36.00%) unsupported leaves are falsely accepted by the 6-class model as disease/healthy diagnoses. Automated botanical crop recognition or an explicit open-set detector is mandatory for universal autonomous safety."
+}

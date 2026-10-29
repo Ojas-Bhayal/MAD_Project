@@ -1,0 +1,55 @@
+Training started: 2026-10-24 03:54:13
+Model Architecture: MobileNetV3-Small (Pretrained ImageNet-1K)
+Number of Classes: 3 (rice_bacterial_leaf_blight, rice_brown_spot, rice_leaf_blast)
+Hyperparameters: epochs=20, batch_size=16, lr=0.0003, weight_decay=0.01, patience=5
+---------------------------------------------------------------------------
+Epoch  | Train Loss  | Train Acc  | Val Loss   | Val Acc   | Val BalAcc  | Time (s)
+---------------------------------------------------------------------------
+1      | 0.5635      | 75.20    % | 0.3564     | 92.41   % | 92.78     % | 11.7     [BEST CHECKPOINT]
+2      | 0.1612      | 94.28    % | 0.3071     | 88.61   % | 87.50     % | 12.2     [BEST CHECKPOINT]
+3      | 0.0947      | 97.28    % | 0.2924     | 91.14   % | 90.28     % | 11.6     [BEST CHECKPOINT]
+4      | 0.0549      | 98.09    % | 0.2586     | 94.94   % | 94.44     % | 12.1     [BEST CHECKPOINT]
+5      | 0.0148      | 100.00   % | 0.2505     | 93.67   % | 93.06     % | 11.6     [BEST CHECKPOINT]
+6      | 0.0231      | 99.46    % | 0.2434     | 93.67   % | 93.06     % | 11.6     [BEST CHECKPOINT]
+7      | 0.0188      | 99.46    % | 0.1902     | 96.20   % | 95.83     % | 11.6     [BEST CHECKPOINT]
+8      | 0.0313      | 98.91    % | 0.1568     | 96.20   % | 94.17     % | 11.6     [BEST CHECKPOINT]
+9      | 0.0533      | 98.09    % | 0.1906     | 94.94   % | 92.78     % | 11.7    
+10     | 0.0427      | 98.09    % | 0.1217     | 97.47   % | 97.22     % | 10.9     [BEST CHECKPOINT]
+11     | 0.0341      | 98.91    % | 0.1666     | 97.47   % | 97.22     % | 6.1     
+12     | 0.0433      | 98.64    % | 0.1509     | 98.73   % | 98.61     % | 5.7     
+13     | 0.0294      | 99.18    % | 0.1614     | 97.47   % | 97.22     % | 5.8     
+14     | 0.0134      | 99.73    % | 0.1768     | 97.47   % | 96.39     % | 5.8     
+15     | 0.0234      | 99.18    % | 0.1907     | 98.73   % | 98.61     % | 5.9     
+
+[EARLY STOPPING TRIGGERED] Validation loss has not improved for 5 consecutive epochs.
+---------------------------------------------------------------------------
+Training completed in 146.3 seconds. Best checkpoint from Epoch 10 (Val Loss: 0.1217).
+
+Loading best checkpoint for held-out test evaluation...
+
+==================================================
+HELD-OUT TEST SET EVALUATION RESULTS
+==================================================
+Total Test Images Evaluated: 78
+Overall Test Accuracy:       97.44% (76 / 78)
+Balanced Accuracy:           96.39%
+Macro F1-Score:              96.65%
+
+Per-Class Breakdown:
+  Class 0 [rice_bacterial_leaf_blight] (Support: 39):
+    Precision: 97.50% | Recall: 100.00% | F1: 98.73%
+  Class 1 [rice_brown_spot] (Support: 15):
+    Precision: 93.33% | Recall: 93.33% | F1: 93.33%
+  Class 2 [rice_leaf_blast] (Support: 24):
+    Precision: 100.00% | Recall: 95.83% | F1: 97.87%
+
+Confusion Matrix (Rows: Actual, Columns: Predicted):
+                               Pred BB    Pred BS    Pred Blast
+  Actual BB (Bacterial):       39         0          0
+  Actual BS (Brown spot):      1          14         0
+  Actual Blast (Leaf blast):   0          1          23
+
+Overfitting & Stability Diagnostic:
+  Best Epoch (10): Train Acc = 98.09%, Val Acc = 97.47%, Test Acc = 97.44%
+  Train-to-Val Loss Gap: 0.0789 (Train: 0.0427, Val: 0.1217)
+  Train-to-Test Accuracy Gap: 0.66%

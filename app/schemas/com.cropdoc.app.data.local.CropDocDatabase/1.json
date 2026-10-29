@@ -1,0 +1,189 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "a8c94e2f19d04b5e81f72c3a90e1d4b2",
+    "entities": [
+      {
+        "tableName": "scans",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`scan_id` TEXT NOT NULL, `user_id` TEXT NOT NULL, `crop_id` TEXT NOT NULL, `disease_id` TEXT NOT NULL, `confidence` REAL NOT NULL, `outcome` TEXT NOT NULL, `local_image_path` TEXT NOT NULL, `remote_image_url` TEXT, `timestamp_ms` INTEGER NOT NULL, `synced` INTEGER NOT NULL, `user_feedback_helpful` INTEGER, `model_version` TEXT NOT NULL, PRIMARY KEY(`scan_id`))",
+        "fields": [
+          {
+            "fieldPath": "scanId",
+            "columnName": "scan_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userId",
+            "columnName": "user_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cropId",
+            "columnName": "crop_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "diseaseId",
+            "columnName": "disease_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "confidence",
+            "columnName": "confidence",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "outcome",
+            "columnName": "outcome",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "localImagePath",
+            "columnName": "local_image_path",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "remoteImageUrl",
+            "columnName": "remote_image_url",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "timestampMs",
+            "columnName": "timestamp_ms",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "synced",
+            "columnName": "synced",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userFeedbackHelpful",
+            "columnName": "user_feedback_helpful",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "modelVersion",
+            "columnName": "model_version",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "scan_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_scans_user_id_timestamp_ms",
+            "unique": false,
+            "columnNames": [
+              "user_id",
+              "timestamp_ms"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_scans_user_id_timestamp_ms` ON `${TABLE_NAME}` (`user_id`, `timestamp_ms`)"
+          },
+          {
+            "name": "index_scans_synced",
+            "unique": false,
+            "columnNames": [
+              "synced"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_scans_synced` ON `${TABLE_NAME}` (`synced`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "advice_catalog",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`disease_id` TEXT NOT NULL, `language_code` TEXT NOT NULL, `crop_name` TEXT NOT NULL, `disease_name` TEXT NOT NULL, `causes` TEXT NOT NULL, `cultural_bio_control` TEXT NOT NULL, `chemical_control_cibrc` TEXT NOT NULL, `prevention_steps` TEXT NOT NULL, `authoritative_source` TEXT NOT NULL, PRIMARY KEY(`disease_id`, `language_code`))",
+        "fields": [
+          {
+            "fieldPath": "diseaseId",
+            "columnName": "disease_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "languageCode",
+            "columnName": "language_code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cropName",
+            "columnName": "crop_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "diseaseName",
+            "columnName": "disease_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "causes",
+            "columnName": "causes",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "culturalBioControl",
+            "columnName": "cultural_bio_control",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "chemicalControlCibrc",
+            "columnName": "chemical_control_cibrc",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "preventionSteps",
+            "columnName": "prevention_steps",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "authoritativeSource",
+            "columnName": "authoritative_source",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "disease_id",
+            "language_code"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a8c94e2f19d04b5e81f72c3a90e1d4b2')"
+    ]
+  }
+}

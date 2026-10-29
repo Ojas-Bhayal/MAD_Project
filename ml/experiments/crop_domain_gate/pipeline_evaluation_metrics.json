@@ -1,0 +1,84 @@
+{
+  "baseline": {
+    "supported": {
+      "total": 256,
+      "correct_accepted": 241,
+      "false_rejections": 12,
+      "false_rejection_rate": 0.0469,
+      "diagnostic_accuracy": 0.9414
+    },
+    "unsupported_indist": {
+      "total": 113,
+      "false_accepted": 36,
+      "false_acceptance_rate": 0.3186,
+      "per_crop_leaks": {
+        "cotton": {
+          "total": 53,
+          "leaks": 27,
+          "leak_rate": 0.5094
+        },
+        "cassava": {
+          "total": 30,
+          "leaks": 2,
+          "leak_rate": 0.0667
+        },
+        "corn": {
+          "total": 30,
+          "leaks": 7,
+          "leak_rate": 0.2333
+        }
+      }
+    },
+    "unseen_tomato": {
+      "total": 100,
+      "false_accepted": 6,
+      "false_acceptance_rate": 0.06
+    },
+    "non_leaf": {
+      "total": 5,
+      "false_accepted": 0,
+      "rejected": 5
+    }
+  },
+  "guarded": {
+    "supported": {
+      "total": 256,
+      "correct_accepted": 241,
+      "false_rejections": 12,
+      "false_rejection_rate": 0.0469,
+      "diagnostic_accuracy": 0.9414
+    },
+    "unsupported_indist": {
+      "total": 113,
+      "false_accepted": 2,
+      "false_acceptance_rate": 0.0177,
+      "per_crop_leaks": {
+        "cotton": {
+          "total": 53,
+          "leaks": 0,
+          "leak_rate": 0.0
+        },
+        "cassava": {
+          "total": 30,
+          "leaks": 0,
+          "leak_rate": 0.0
+        },
+        "corn": {
+          "total": 30,
+          "leaks": 2,
+          "leak_rate": 0.0667
+        }
+      }
+    },
+    "unseen_tomato": {
+      "total": 100,
+      "false_accepted": 0,
+      "false_acceptance_rate": 0.0
+    },
+    "non_leaf": {
+      "total": 5,
+      "false_accepted": 0,
+      "rejected": 5
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="research_mode_heading">పరిశోధనా మోడల్ (Debug మాత్రమే)</string>
+    <string name="research_mode_six_class">వరి + వేరుశనగ (6 తరగతులు)</string>
+    <string name="research_mode_cotton_pilot">పత్తి పైలట్ (2 తరగతులు)</string>
+    <string name="research_mode_help">ముందుగా పంట మోడల్‌ను ఎంచుకుని, తర్వాత కొత్త చిత్రాన్ని ఎంచుకోండి. మోడల్ మార్చినప్పుడు గత చిత్రం తొలగించబడుతుంది. పత్తి పైలట్ ఆరు-తరగతుల వరి/వేరుశనగ పైప్‌లైన్‌కు వేరు.</string>
+    <string name="research_cotton_model_unavailable_warning">పత్తి పైలట్ మోడల్ అందుబాటులో లేదు. cotton_binary_fp32.tflite మరియు దానికి సరిపోయే మానిఫెస్ట్‌ను ఎగుమతి చేసి app/src/debug/assets/research_models/ లో రెండింటినీ కాపీ చేయండి. ఎలాంటి అంచనా రూపొందించలేదు.</string>
+    <string name="research_cotton_pilot_result_title">పత్తి పైలట్ ఫలితం — పరిశోధన మాత్రమే</string>
+    <string name="research_cotton_pilot_score_fmt">కాలిబ్రేట్ చేయని మోడల్ స్కోరు: %1$d%% · ఇన్ఫరెన్స్ సమయం: %2$d ms</string>
+    <string name="research_cotton_pilot_disclaimer">ప్రయోగాత్మక ఉపయోగం మాత్రమే. పత్తి మూల లేబుళ్లను మొక్కల వ్యాధి నిపుణుడు ధృవీకరించలేదు. ఈ స్కోరు ధృవీకరించిన వ్యాధి సంభావ్యత కాదు; పంట చికిత్స నిర్ణయాలకు దీనిని ఉపయోగించవద్దు.</string>
+    <string name="research_sample_asset_missing">బండిల్ చేసిన నమూనా చిత్రం లేదు లేదా చదవలేకపోయాం. ఇన్ఫరెన్స్ చేయలేదు.</string>
+    <string name="research_loading_text_cotton">పత్తి పైలట్ (నాణ్యత మరియు ఆకు తనిఖీలు) ద్వారా చిత్రాన్ని విశ్లేషిస్తోంది…</string>
+    <string name="research_disclaimer_body_cotton">ప్రయోగాత్మక పరిశోధనా మోడళ్లు మాత్రమే: ప్రస్తుత ఆరు-తరగతుల పైప్‌లైన్ వరి మరియు వేరుశనగ కోసం; వేరైన పత్తి బైనరీ పైలట్ ధృవీకరించబడలేదు. ఏ పరిశోధనా ఫలితమూ ధృవీకరించిన ప్రొడక్షన్ నిర్ధారణ కాదు. ప్రొడక్షన్ విడుదల గేట్ లాక్‌లోనే ఉంటుంది.</string>
+</resources>

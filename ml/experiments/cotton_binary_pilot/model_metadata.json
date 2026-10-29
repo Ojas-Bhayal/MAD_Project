@@ -1,0 +1,35 @@
+{
+  "experiment": "cotton_binary_pilot",
+  "status": "COMPLETED_PILOT_RESEARCH_ONLY",
+  "diagnostic_status": "UNVALIDATED_PILOT (UNREVIEWED_SOURCE_LABELS)",
+  "production_approval": "BLOCKED",
+  "class_mapping": {
+    "cotton_bacterial_blight": 0,
+    "cotton_healthy": 1
+  },
+  "classes": [
+    "cotton_bacterial_blight",
+    "cotton_healthy"
+  ],
+  "input_tensor_shape": [
+    1,
+    3,
+    224,
+    224
+  ],
+  "normalization": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "checkpoint_file": "best_model.pt",
+  "checkpoint_sha256": "cc1fbcebaa3a80659da42905bcbdf548df4fd81815701de82ff4a9006077b33c",
+  "created_at": "2026-10-24 03:24:26"
+}

@@ -1,0 +1,775 @@
+{
+  "timestamp": "2026-10-24",
+  "benchmark_duration_seconds": 13.16,
+  "calibrated_thresholds": {
+    "confidence_threshold": 0.6,
+    "margin_threshold": 0.35,
+    "max_normalized_entropy": 0.55,
+    "coverage": 0.9769,
+    "accuracy_accepted": 0.9905,
+    "false_rejection_rate": 0.0231,
+    "accepted_count": 211,
+    "total_count": 216
+  },
+  "validation_grid_search_sample": [
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.15,
+      "max_normalized_entropy": 0.55,
+      "coverage": 0.9861,
+      "accuracy_accepted": 0.9812,
+      "false_rejection_rate": 0.0139,
+      "accepted_count": 213,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.15,
+      "max_normalized_entropy": 0.5,
+      "coverage": 0.9815,
+      "accuracy_accepted": 0.9811,
+      "false_rejection_rate": 0.0185,
+      "accepted_count": 212,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.15,
+      "max_normalized_entropy": 0.45,
+      "coverage": 0.9815,
+      "accuracy_accepted": 0.9811,
+      "false_rejection_rate": 0.0185,
+      "accepted_count": 212,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.15,
+      "max_normalized_entropy": 0.4,
+      "coverage": 0.9676,
+      "accuracy_accepted": 0.9856,
+      "false_rejection_rate": 0.0324,
+      "accepted_count": 209,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.15,
+      "max_normalized_entropy": 0.35,
+      "coverage": 0.9444,
+      "accuracy_accepted": 0.9902,
+      "false_rejection_rate": 0.0556,
+      "accepted_count": 204,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.2,
+      "max_normalized_entropy": 0.55,
+      "coverage": 0.9861,
+      "accuracy_accepted": 0.9812,
+      "false_rejection_rate": 0.0139,
+      "accepted_count": 213,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.2,
+      "max_normalized_entropy": 0.5,
+      "coverage": 0.9815,
+      "accuracy_accepted": 0.9811,
+      "false_rejection_rate": 0.0185,
+      "accepted_count": 212,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.2,
+      "max_normalized_entropy": 0.45,
+      "coverage": 0.9815,
+      "accuracy_accepted": 0.9811,
+      "false_rejection_rate": 0.0185,
+      "accepted_count": 212,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.2,
+      "max_normalized_entropy": 0.4,
+      "coverage": 0.9676,
+      "accuracy_accepted": 0.9856,
+      "false_rejection_rate": 0.0324,
+      "accepted_count": 209,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.2,
+      "max_normalized_entropy": 0.35,
+      "coverage": 0.9444,
+      "accuracy_accepted": 0.9902,
+      "false_rejection_rate": 0.0556,
+      "accepted_count": 204,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.25,
+      "max_normalized_entropy": 0.55,
+      "coverage": 0.9815,
+      "accuracy_accepted": 0.9858,
+      "false_rejection_rate": 0.0185,
+      "accepted_count": 212,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.25,
+      "max_normalized_entropy": 0.5,
+      "coverage": 0.9769,
+      "accuracy_accepted": 0.9858,
+      "false_rejection_rate": 0.0231,
+      "accepted_count": 211,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.25,
+      "max_normalized_entropy": 0.45,
+      "coverage": 0.9769,
+      "accuracy_accepted": 0.9858,
+      "false_rejection_rate": 0.0231,
+      "accepted_count": 211,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.25,
+      "max_normalized_entropy": 0.4,
+      "coverage": 0.963,
+      "accuracy_accepted": 0.9904,
+      "false_rejection_rate": 0.037,
+      "accepted_count": 208,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.25,
+      "max_normalized_entropy": 0.35,
+      "coverage": 0.9444,
+      "accuracy_accepted": 0.9902,
+      "false_rejection_rate": 0.0556,
+      "accepted_count": 204,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.3,
+      "max_normalized_entropy": 0.55,
+      "coverage": 0.9769,
+      "accuracy_accepted": 0.9905,
+      "false_rejection_rate": 0.0231,
+      "accepted_count": 211,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.3,
+      "max_normalized_entropy": 0.5,
+      "coverage": 0.9722,
+      "accuracy_accepted": 0.9905,
+      "false_rejection_rate": 0.0278,
+      "accepted_count": 210,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.3,
+      "max_normalized_entropy": 0.45,
+      "coverage": 0.9722,
+      "accuracy_accepted": 0.9905,
+      "false_rejection_rate": 0.0278,
+      "accepted_count": 210,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.3,
+      "max_normalized_entropy": 0.4,
+      "coverage": 0.963,
+      "accuracy_accepted": 0.9904,
+      "false_rejection_rate": 0.037,
+      "accepted_count": 208,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.3,
+      "max_normalized_entropy": 0.35,
+      "coverage": 0.9444,
+      "accuracy_accepted": 0.9902,
+      "false_rejection_rate": 0.0556,
+      "accepted_count": 204,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.35,
+      "max_normalized_entropy": 0.55,
+      "coverage": 0.9769,
+      "accuracy_accepted": 0.9905,
+      "false_rejection_rate": 0.0231,
+      "accepted_count": 211,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.35,
+      "max_normalized_entropy": 0.5,
+      "coverage": 0.9722,
+      "accuracy_accepted": 0.9905,
+      "false_rejection_rate": 0.0278,
+      "accepted_count": 210,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.35,
+      "max_normalized_entropy": 0.45,
+      "coverage": 0.9722,
+      "accuracy_accepted": 0.9905,
+      "false_rejection_rate": 0.0278,
+      "accepted_count": 210,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.35,
+      "max_normalized_entropy": 0.4,
+      "coverage": 0.963,
+      "accuracy_accepted": 0.9904,
+      "false_rejection_rate": 0.037,
+      "accepted_count": 208,
+      "total_count": 216
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_threshold": 0.35,
+      "max_normalized_entropy": 0.35,
+      "coverage": 0.9444,
+      "accuracy_accepted": 0.9902,
+      "false_rejection_rate": 0.0556,
+      "accepted_count": 204,
+      "total_count": 216
+    }
+  ],
+  "test_benchmark": {
+    "total_test_samples": 256,
+    "accepted_count": 253,
+    "correct_accepted": 250,
+    "coverage": 0.9883,
+    "accuracy_among_accepted": 0.9881,
+    "false_rejection_rate": 0.0117,
+    "confusion_matrix_accepted": [
+      [
+        39,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        14,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        22,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        22,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        30,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        123
+      ]
+    ],
+    "rejection_breakdown": {
+      "CONFIDENCE_BELOW_THRESHOLD": 1,
+      "MARGIN_BELOW_THRESHOLD": 2
+    },
+    "rejected_samples": [
+      {
+        "path": "data/raw/rice_mendeley_sethy/Brownspot/brownspot_orig_015.jpg",
+        "true_label": 1,
+        "true_class": "rice_brown_spot",
+        "outcome_type": "INCONCLUSIVE_LOW_CONFIDENCE",
+        "rejection_detail": "CONFIDENCE_BELOW_THRESHOLD",
+        "confidence": 0.5742583274841309,
+        "margin": 0.39844073355197906,
+        "entropy": 0.6660220243080077,
+        "explanation": "Top-1 confidence (0.5743) is below threshold (0.6000)."
+      },
+      {
+        "path": "data/raw/rice_mendeley_healthy_candidate/Original Images/Healthy Rice Leaf/Healthy_rice_leaf  (57).jpg",
+        "true_label": 3,
+        "true_class": "rice_healthy",
+        "outcome_type": "INCONCLUSIVE_LOW_CONFIDENCE",
+        "rejection_detail": "MARGIN_BELOW_THRESHOLD",
+        "confidence": 0.5787526965141296,
+        "margin": 0.1899230182170868,
+        "entropy": 0.4612098708498162,
+        "explanation": "Top-2 margin (0.1899) is below threshold (0.3500). Prediction is ambiguous."
+      },
+      {
+        "path": "data/raw/mendeley_groundnut/train/healthy_leaf_1/dr_203_2298.jpg",
+        "true_label": 5,
+        "true_class": "groundnut_healthy",
+        "outcome_type": "INCONCLUSIVE_LOW_CONFIDENCE",
+        "rejection_detail": "MARGIN_BELOW_THRESHOLD",
+        "confidence": 0.6275357604026794,
+        "margin": 0.25628605484962463,
+        "entropy": 0.3739399506512988,
+        "explanation": "Top-2 margin (0.2563) is below threshold (0.3500). Prediction is ambiguous."
+      }
+    ]
+  },
+  "ood_stress_benchmark": {
+    "total_ood_samples": 120,
+    "guarded_policy": {
+      "false_positives_accepted": 0,
+      "false_acceptance_rate": 0.0,
+      "correctly_rejected": 120,
+      "rejection_rate": 1.0,
+      "rejection_breakdown": {
+        "UNSUPPORTED_CROP_DOMAIN": 120
+      }
+    },
+    "unguarded_policy": {
+      "false_positives_accepted": 47,
+      "false_acceptance_rate": 0.3917,
+      "correctly_rejected": 73,
+      "rejection_rate": 0.6083,
+      "rejection_breakdown": {
+        "CONFIDENCE_BELOW_THRESHOLD": 6,
+        "MARGIN_BELOW_THRESHOLD": 57,
+        "ENTROPY_ABOVE_THRESHOLD": 10
+      },
+      "accepted_samples": [
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(1).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "groundnut_early_leaf_spot",
+          "confidence": 0.8479028344154358,
+          "margin": 0.7811398878693581,
+          "entropy": 0.35175646159465485
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(10).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "groundnut_healthy",
+          "confidence": 0.941956102848053,
+          "margin": 0.9064292497932911,
+          "entropy": 0.1567582728903305
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(101).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "groundnut_early_leaf_spot",
+          "confidence": 0.7431631684303284,
+          "margin": 0.5591063797473907,
+          "entropy": 0.44281062052173065
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(102).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "rice_leaf_blast",
+          "confidence": 0.8195483088493347,
+          "margin": 0.7335570901632309,
+          "entropy": 0.3701174893052389
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(106).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "rice_leaf_blast",
+          "confidence": 0.8235630989074707,
+          "margin": 0.7488618716597557,
+          "entropy": 0.3755846209813878
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(107).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "rice_leaf_blast",
+          "confidence": 0.7760304808616638,
+          "margin": 0.6516106724739075,
+          "entropy": 0.4076593516765429
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(109).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "groundnut_healthy",
+          "confidence": 0.9026393294334412,
+          "margin": 0.8600335791707039,
+          "entropy": 0.240756732895952
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(110).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "rice_leaf_blast",
+          "confidence": 0.6281531453132629,
+          "margin": 0.41290436685085297,
+          "entropy": 0.5356847947892089
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(112).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "groundnut_early_leaf_spot",
+          "confidence": 0.871161937713623,
+          "margin": 0.7875736430287361,
+          "entropy": 0.2914822879356024
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(113).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "groundnut_early_leaf_spot",
+          "confidence": 0.8284144997596741,
+          "margin": 0.7269549295306206,
+          "entropy": 0.3540400051789784
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(114).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "groundnut_healthy",
+          "confidence": 0.7790364027023315,
+          "margin": 0.6492941081523895,
+          "entropy": 0.4200020968608787
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(115).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "rice_leaf_blast",
+          "confidence": 0.7893368601799011,
+          "margin": 0.6788240745663643,
+          "entropy": 0.40493716280555764
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(12).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "groundnut_healthy",
+          "confidence": 0.8684200644493103,
+          "margin": 0.7738446891307831,
+          "entropy": 0.2817596715783053
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(124).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "groundnut_early_leaf_spot",
+          "confidence": 0.8199569582939148,
+          "margin": 0.6852059215307236,
+          "entropy": 0.3414696873868727
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(13).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "groundnut_early_leaf_spot",
+          "confidence": 0.9759746789932251,
+          "margin": 0.9542547129094601,
+          "entropy": 0.06899370827657313
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(135).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "groundnut_early_leaf_spot",
+          "confidence": 0.6739333868026733,
+          "margin": 0.4822174906730652,
+          "entropy": 0.5394190014753634
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(136).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "groundnut_early_leaf_spot",
+          "confidence": 0.7666255831718445,
+          "margin": 0.5864279717206955,
+          "entropy": 0.4007270861948093
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(137).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "groundnut_early_leaf_spot",
+          "confidence": 0.9292591214179993,
+          "margin": 0.8911286778748035,
+          "entropy": 0.18707777375211893
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(142).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "groundnut_early_leaf_spot",
+          "confidence": 0.8896923065185547,
+          "margin": 0.8322362303733826,
+          "entropy": 0.2654799635253334
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(147).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "groundnut_healthy",
+          "confidence": 0.6703542470932007,
+          "margin": 0.47332119941711426,
+          "entropy": 0.519098407614613
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(151).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "rice_leaf_blast",
+          "confidence": 0.7826464176177979,
+          "margin": 0.7213123850524426,
+          "entropy": 0.4671258937362041
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(153).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "groundnut_early_leaf_spot",
+          "confidence": 0.8238270282745361,
+          "margin": 0.7232013717293739,
+          "entropy": 0.376205829997247
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\staged\\mendeley_cotton_2025\\cotton_bacterial_blight\\bacterial_(158).jpg",
+          "crop_tag": "cotton",
+          "pred_class": "groundnut_healthy",
+          "confidence": 0.7442219257354736,
+          "margin": 0.6250306591391563,
+          "entropy": 0.4946808414942936
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Charbon_de_mais-2-_jpg.rf.e2c36854e8f83c0f5cdd4ba854405c87.jpg",
+          "crop_tag": "corn",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.6975017786026001,
+          "margin": 0.45590920746326447,
+          "entropy": 0.450783113374457
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Charbon_de_mais-6-_jpg.rf.159bb5be9e0a69c9e5e88004b7b36af8.jpg",
+          "crop_tag": "corn",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.9532028436660767,
+          "margin": 0.9369455929845572,
+          "entropy": 0.14048495190660165
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Charbon_de_mais-7-_jpg.rf.8b61a1ca3698d179d983ac4b211fb5c3.jpg",
+          "crop_tag": "corn",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.9428215622901917,
+          "margin": 0.9162379540503025,
+          "entropy": 0.16192022241420923
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Mais_Charbons_-5-_jpg.rf.4c674439e4fc7d5017bb5cfd39df2e15.jpg",
+          "crop_tag": "corn",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.817674458026886,
+          "margin": 0.666029691696167,
+          "entropy": 0.33020629037264343
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Mais_Charbons_-7-_jpg.rf.078d39f5e34763471c2b0e250874a773.jpg",
+          "crop_tag": "corn",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.872127115726471,
+          "margin": 0.7685918807983398,
+          "entropy": 0.26337826845151613
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Manioc_Bacteriose-108-_jpg.rf.d66309baf63004fe7e553184fbbecb40.jpg",
+          "crop_tag": "cassava",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.7004066109657288,
+          "margin": 0.47034379839897156,
+          "entropy": 0.4680928028748442
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Manioc_Bacteriose-109-_jpg.rf.0bb6388dcc223e68e11c4c4d532181a2.jpg",
+          "crop_tag": "cassava",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.6803719997406006,
+          "margin": 0.422209233045578,
+          "entropy": 0.4797507344787753
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Manioc_Bacteriose-110-_jpg.rf.bd4be5eaa4e5a4d14a433e2ef98715fc.jpg",
+          "crop_tag": "cassava",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.788438081741333,
+          "margin": 0.6416028439998627,
+          "entropy": 0.40267517557992943
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Manioc_Bacteriose-111-_jpg.rf.0d76f0d453b10f0777f2df1ea005607e.jpg",
+          "crop_tag": "cassava",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.8734651207923889,
+          "margin": 0.7703419178724289,
+          "entropy": 0.25920553290964976
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Manioc_Bacteriose-14-_jpg.rf.f8f03a23693a0432f7e855b4efb54a4f.jpg",
+          "crop_tag": "cassava",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.8551830649375916,
+          "margin": 0.7940106354653835,
+          "entropy": 0.326503120851092
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Manioc_Bacteriose-15-_jpg.rf.6a76782fbeaf0c8f7e725c40c9da7c02.jpg",
+          "crop_tag": "cassava",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.8129362463951111,
+          "margin": 0.7247163280844688,
+          "entropy": 0.38775914007633727
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Manioc_Bacteriose-16-_jpg.rf.e9a05fcf75334f05961e2e7bf5285ebb.jpg",
+          "crop_tag": "cassava",
+          "pred_class": "groundnut_healthy",
+          "confidence": 0.7576738595962524,
+          "margin": 0.6336668580770493,
+          "entropy": 0.4760574782209449
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Manioc_Bacteriose-2-_jpg.rf.2492d5dedce7be71dd346109ad736a2b.jpg",
+          "crop_tag": "cassava",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.9270594716072083,
+          "margin": 0.8796112798154354,
+          "entropy": 0.18925433392662117
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Manioc_Bacteriose-21-_jpg.rf.c42b3dec5c56743a1ce5bb26316fb7ea.jpg",
+          "crop_tag": "cassava",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.639155924320221,
+          "margin": 0.3783252537250519,
+          "entropy": 0.5231047965952818
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Manioc_Bacteriose-22-_jpg.rf.9e4fa7b4f97847fa7c338783d050eb8d.jpg",
+          "crop_tag": "cassava",
+          "pred_class": "rice_leaf_blast",
+          "confidence": 0.727245569229126,
+          "margin": 0.5250636637210846,
+          "entropy": 0.44778331985329795
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Manioc_Bacteriose-24-_jpg.rf.0b02edbfd6d2350d8d6b45c84e6661ec.jpg",
+          "crop_tag": "cassava",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.7408396005630493,
+          "margin": 0.6533328890800476,
+          "entropy": 0.5256123200609258
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Manioc_Bacteriose-25-_jpg.rf.7f3e6631b170f31fdcfc6d6bcc5c3a05.jpg",
+          "crop_tag": "cassava",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.926857590675354,
+          "margin": 0.8781447149813175,
+          "entropy": 0.1847808406085749
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Manioc_Bacteriose-26-_jpg.rf.77a252465d3a1672d9b60176e078c634.jpg",
+          "crop_tag": "cassava",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.9004306197166443,
+          "margin": 0.8534009531140327,
+          "entropy": 0.25015094744300154
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Manioc_Bacteriose-27-_jpg.rf.a91c68266b6532d52f4b13f9f5d7b9b6.jpg",
+          "crop_tag": "cassava",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.9300810098648071,
+          "margin": 0.8783755265176296,
+          "entropy": 0.17561283476388387
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Manioc_Bacteriose-3-_jpg.rf.81e2f9546e6183baeca72c2b2971127f.jpg",
+          "crop_tag": "cassava",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.9352355003356934,
+          "margin": 0.8771747127175331,
+          "entropy": 0.14965526973729476
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Manioc_Bacteriose-30-_jpg.rf.4e41ec381991682a2b859c0545eaa796.jpg",
+          "crop_tag": "cassava",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.7820957899093628,
+          "margin": 0.6572854369878769,
+          "entropy": 0.4169429900873219
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Manioc_Bacteriose-38-_jpg.rf.4269be8af6e5b043c6bc2b1f69c95d5b.jpg",
+          "crop_tag": "cassava",
+          "pred_class": "rice_leaf_blast",
+          "confidence": 0.6420758366584778,
+          "margin": 0.42526009678840637,
+          "entropy": 0.5382391234966498
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Manioc_Bacteriose-40-_jpg.rf.89ad5085da726d5b2214552e15ba558a.jpg",
+          "crop_tag": "cassava",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.8318459987640381,
+          "margin": 0.753359779715538,
+          "entropy": 0.3485534129012296
+        },
+        {
+          "path": "C:\\Users\\ojas\\OneDrive\\Desktop\\MajorProjectMAD\\CropDoc\\data\\raw\\fieldplant\\train\\Manioc_Bacteriose-41-_jpg.rf.ecbf0b154fc38f839efef3df5b92af61.jpg",
+          "crop_tag": "cassava",
+          "pred_class": "rice_bacterial_leaf_blight",
+          "confidence": 0.8824513554573059,
+          "margin": 0.7896762043237686,
+          "entropy": 0.25100262320738137
+        }
+      ]
+    }
+  },
+  "non_leaf_benchmark": {
+    "non_leaf_results": [
+      {
+        "input_file": "08_non_leaf_soil_and_tools.jpg",
+        "gate_rejected_outcome": "OUT_OF_DOMAIN",
+        "gate_rejected_detail": "LEAF_GATE_REJECTED_NON_LEAF",
+        "unvalidated_gate_outcome": "MODEL_UNAVAILABLE",
+        "unvalidated_gate_detail": "LEAF_GATE_UNVALIDATED"
+      }
+    ]
+  }
+}

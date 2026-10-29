@@ -1,0 +1,96 @@
+{
+  "experiment_name": "groundnut_binary_pilot",
+  "dataset_name": "mendeley_groundnut_v3",
+  "model_architecture": "mobilenet_v3_small",
+  "random_seed": 42,
+  "classes": {
+    "groundnut_early_leaf_spot": 0,
+    "groundnut_healthy": 1
+  },
+  "hardware_environment": {
+    "python_version": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "cpu_count": 12,
+    "torch_version": "2.14.1+cpu",
+    "cuda_available": false,
+    "device_used": "cpu"
+  },
+  "training_duration_seconds": 248.56,
+  "dataset_counts": {
+    "train": 2517,
+    "val": 538,
+    "test": 539,
+    "total_clean": 3594
+  },
+  "history": {
+    "train_loss": [
+      0.2696283028968327,
+      0.04982616116222842,
+      0.013195364315315851,
+      0.00928256075804199,
+      0.006891878404603501,
+      0.00777674109327548
+    ],
+    "train_acc": [
+      0.9058402860548271,
+      0.9825188716726262,
+      0.9976162097735399,
+      0.9968216130313866,
+      0.9984108065156932,
+      0.9972189114024632
+    ],
+    "val_loss": [
+      0.08858105207907666,
+      0.036025532970523466,
+      0.02868793504706456,
+      0.029503696069915927,
+      0.02796683828350759,
+      0.02699711175762205
+    ],
+    "val_acc": [
+      0.9776951672862454,
+      0.9944237918215614,
+      0.9962825278810409,
+      0.9944237918215614,
+      0.9962825278810409,
+      0.9962825278810409
+    ]
+  },
+  "test_results": {
+    "overall_accuracy": 0.9759,
+    "macro_f1": 0.9758,
+    "confusion_matrix": [
+      [
+        248,
+        12
+      ],
+      [
+        1,
+        278
+      ]
+    ],
+    "per_class": {
+      "groundnut_early_leaf_spot": {
+        "support": 260,
+        "precision": 0.9959839357429718,
+        "recall": 0.9538461538461539,
+        "f1_score": 0.9744597249508841,
+        "tp": 248,
+        "fp": 1,
+        "fn": 12,
+        "tn": 278
+      },
+      "groundnut_healthy": {
+        "support": 279,
+        "precision": 0.9586206896551724,
+        "recall": 0.996415770609319,
+        "f1_score": 0.977152899824253,
+        "tp": 278,
+        "fp": 12,
+        "fn": 1,
+        "tn": 248
+      }
+    }
+  }
+}

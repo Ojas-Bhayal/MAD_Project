@@ -1,0 +1,16 @@
+{
+  "contract_id": "cropdoc_preprocessing_v1",
+  "version": "1.0.0",
+  "input_shape": [1, 224, 224, 3],
+  "color_space": "sRGB",
+  "channel_order": "RGB",
+  "orientation_handling": "EXIF_TRANSPOSE_FIRST",
+  "crop_geometry": "CENTER_SQUARE_RETICLE_CROP",
+  "resize_method": "BILINEAR",
+  "antialiasing": true,
+  "dtype": "uint8",
+  "normalization": "RAW_BYTES_0_TO_255",
+  "quantization_scale": 0.0078125,
+  "quantization_zero_point": 128,
+  "specification_notes": "All inference paths (Android LeafPreprocessor, Python evaluate_model.py, and training pipelines) MUST strictly adhere to this contract."
+}

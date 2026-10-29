@@ -1,0 +1,12 @@
+{
+  "class_to_index": {
+    "rice_bacterial_leaf_blight": 0,
+    "rice_brown_spot": 1,
+    "rice_leaf_blast": 2
+  },
+  "index_to_class": {
+    "0": "rice_bacterial_leaf_blight",
+    "1": "rice_brown_spot",
+    "2": "rice_leaf_blast"
+  }
+}

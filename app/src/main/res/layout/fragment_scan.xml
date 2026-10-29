@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/spacing_medium">
+
+    <LinearLayout
+        android:id="@+id/scan_research_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_small"
+        android:background="@color/surface_card"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/txt_scan_research_banner"
+            style="@style/TextAppearance.CropDoc.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/scan_research_banner"
+            android:textColor="@color/on_secondary_container" />
+
+        <Spinner
+            android:id="@+id/spinner_scan_crop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:contentDescription="@string/scan_research_crop_selector_description"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/camera_preview_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/cd_camera_preview"
+        app:layout_constraintBottom_toTopOf="@id/txt_reticle_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scan_research_header" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/scrim_camera_overlay"
+        app:layout_constraintBottom_toTopOf="@id/leaf_reticle_box"
+        app:layout_constraintEnd_toEndOf="@id/camera_preview_view"
+        app:layout_constraintStart_toStartOf="@id/camera_preview_view"
+        app:layout_constraintTop_toTopOf="@id/camera_preview_view" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/scrim_camera_overlay"
+        app:layout_constraintBottom_toBottomOf="@id/camera_preview_view"
+        app:layout_constraintEnd_toEndOf="@id/camera_preview_view"
+        app:layout_constraintStart_toStartOf="@id/camera_preview_view"
+        app:layout_constraintTop_toBottomOf="@id/leaf_reticle_box" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/scrim_camera_overlay"
+        app:layout_constraintBottom_toBottomOf="@id/leaf_reticle_box"
+        app:layout_constraintEnd_toStartOf="@id/leaf_reticle_box"
+        app:layout_constraintStart_toStartOf="@id/camera_preview_view"
+        app:layout_constraintTop_toTopOf="@id/leaf_reticle_box" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/scrim_camera_overlay"
+        app:layout_constraintBottom_toBottomOf="@id/leaf_reticle_box"
+        app:layout_constraintEnd_toEndOf="@id/camera_preview_view"
+        app:layout_constraintStart_toEndOf="@id/leaf_reticle_box"
+        app:layout_constraintTop_toTopOf="@id/leaf_reticle_box" />
+
+    <View
+        android:id="@+id/leaf_reticle_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_reticle_box"
+        android:contentDescription="@string/cd_leaf_reticle"
+        app:layout_constraintBottom_toBottomOf="@id/camera_preview_view"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/camera_preview_view"
+        app:layout_constraintHeight_max="@dimen/reticle_size"
+        app:layout_constraintHeight_percent="0.65"
+        app:layout_constraintStart_toStartOf="@id/camera_preview_view"
+        app:layout_constraintTop_toTopOf="@id/camera_preview_view"
+        app:layout_constraintWidth_max="@dimen/reticle_size" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_toggle_torch"
+        style="@style/Widget.CropDoc.Button.Tonal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:text="@string/btn_toggle_torch_off"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/camera_preview_view"
+        app:layout_constraintTop_toTopOf="@id/camera_preview_view" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_camera_permission"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_medium"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/surface_card"
+        app:cardCornerRadius="@dimen/radius_large"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/outline_subtle"
+        app:strokeWidth="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/camera_preview_view"
+        app:layout_constraintEnd_toEndOf="@id/camera_preview_view"
+        app:layout_constraintStart_toStartOf="@id/camera_preview_view"
+        app:layout_constraintTop_toTopOf="@id/camera_preview_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_medium">
+
+            <TextView
+                style="@style/TextAppearance.CropDoc.SectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/permission_camera_rationale" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_grant_camera_inline"
+                style="@style/Widget.CropDoc.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:text="@string/action_grant_camera" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/txt_reticle_hint"
+        style="@style/TextAppearance.CropDoc.Caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:background="@drawable/bg_status_pill"
+        android:gravity="center"
+        android:lineSpacingExtra="3sp"
+        android:padding="@dimen/spacing_small"
+        android:text="@string/scan_reticle_instruction"
+        android:textColor="@color/on_secondary_container"
+        app:layout_constraintBottom_toTopOf="@id/btn_capture_leaf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_capture_leaf"
+        style="@style/Widget.CropDoc.Button.Primary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_scan_leaf"
+        app:layout_constraintBottom_toTopOf="@id/btn_pick_gallery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_pick_gallery"
+        style="@style/Widget.CropDoc.Button.Tonal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:text="@string/btn_pick_from_gallery"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/scan_progress_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

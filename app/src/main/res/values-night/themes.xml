@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.CropDoc" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_green</item>
+        <item name="colorOnPrimary">@color/on_primary_white</item>
+        <item name="colorPrimaryContainer">@color/primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
+        <item name="colorSecondary">@color/secondary_green</item>
+        <item name="colorSecondaryContainer">@color/secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/on_secondary_container</item>
+        <item name="colorSurface">@color/surface_bg</item>
+        <item name="colorOnSurface">@color/on_surface_text</item>
+        <item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
+        <item name="colorOutline">@color/outline_subtle</item>
+        <item name="colorError">@color/error_red</item>
+        <item name="android:windowBackground">@color/surface_bg</item>
+    </style>
+
+    <style name="TextAppearance.CropDoc.Headline" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/on_surface_text</item>
+        <item name="android:includeFontPadding">true</item>
+    </style>
+
+    <style name="TextAppearance.CropDoc.SectionTitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/on_surface_text</item>
+        <item name="android:includeFontPadding">true</item>
+    </style>
+
+    <style name="TextAppearance.CropDoc.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/on_surface_text</item>
+        <item name="android:includeFontPadding">true</item>
+    </style>
+
+    <style name="TextAppearance.CropDoc.Caption" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/on_surface_variant</item>
+        <item name="android:includeFontPadding">true</item>
+    </style>
+
+    <style name="Widget.CropDoc.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/min_touch_target</item>
+        <item name="android:paddingTop">@dimen/button_vertical_padding</item>
+        <item name="android:paddingBottom">@dimen/button_vertical_padding</item>
+        <item name="backgroundTint">@color/primary_green</item>
+        <item name="android:textColor">@color/on_primary_white</item>
+    </style>
+
+    <style name="Widget.CropDoc.Button.Tonal" parent="Widget.Material3.Button.TonalButton">
+        <item name="android:minHeight">@dimen/min_touch_target</item>
+        <item name="android:paddingTop">@dimen/button_vertical_padding</item>
+        <item name="android:paddingBottom">@dimen/button_vertical_padding</item>
+        <item name="backgroundTint">@color/secondary_container</item>
+        <item name="android:textColor">@color/on_secondary_container</item>
+    </style>
+
+    <style name="Widget.CropDoc.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">@dimen/min_touch_target</item>
+        <item name="android:paddingTop">@dimen/button_vertical_padding</item>
+        <item name="android:paddingBottom">@dimen/button_vertical_padding</item>
+        <item name="strokeColor">@color/outline_subtle</item>
+        <item name="android:textColor">@color/on_surface_text</item>
+    </style>
+
+    <style name="Widget.CropDoc.Button.Destructive" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">@dimen/min_touch_target</item>
+        <item name="android:paddingTop">@dimen/button_vertical_padding</item>
+        <item name="android:paddingBottom">@dimen/button_vertical_padding</item>
+        <item name="strokeColor">@color/error_red</item>
+        <item name="android:textColor">@color/error_red</item>
+    </style>
+</resources>

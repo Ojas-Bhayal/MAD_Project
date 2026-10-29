@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="research_history_heading">Experimental scan history (research only)</string>
+    <string name="research_history_badge">EXPERIMENTAL • NOT VERIFIED</string>
+    <string name="research_history_result_detail">Uncalibrated score: %1$d%% • Inference: %2$d ms</string>
+    <string name="research_history_no_prediction">No prediction was accepted for this scan.</string>
+    <string name="research_history_detail_dialog">Crop: %1$s
+Output/status: %2$s
+Uncalibrated model score: %3$d%%
+Time: %4$s
+
+%5$s
+
+This is a local experimental record, not a verified diagnosis.</string>
+<string name="research_history_nonresult_dialog">Crop: %1$s\nStatus: %2$s\nTime: %3$s\n\n%4$s\n\nThis is a local experimental record, not a verified diagnosis.</string>
+</resources>

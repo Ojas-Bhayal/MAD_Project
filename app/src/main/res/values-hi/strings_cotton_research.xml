@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="research_mode_heading">शोध मॉडल (केवल Debug)</string>
+    <string name="research_mode_six_class">धान + मूंगफली (6 श्रेणियाँ)</string>
+    <string name="research_mode_cotton_pilot">कपास पायलट (2 श्रेणियाँ)</string>
+    <string name="research_mode_help">पहले फसल मॉडल चुनें, फिर नई तस्वीर चुनें। मॉडल बदलने पर पिछली तस्वीर हट जाती है। कपास पायलट धान/मूंगफली की छह-श्रेणी पाइपलाइन से अलग है।</string>
+    <string name="research_cotton_model_unavailable_warning">कपास पायलट मॉडल उपलब्ध नहीं है। cotton_binary_fp32.tflite और उसका मिलान करता मैनिफेस्ट निर्यात करके app/src/debug/assets/research_models/ में दोनों कॉपी करें। कोई परिणाम नहीं बनाया गया।</string>
+    <string name="research_cotton_pilot_result_title">कपास पायलट परिणाम — केवल शोध</string>
+    <string name="research_cotton_pilot_score_fmt">अंशांकित नहीं किया गया मॉडल स्कोर: %1$d%% · अनुमान समय: %2$d ms</string>
+    <string name="research_cotton_pilot_disclaimer">केवल प्रायोगिक उपयोग। कपास के स्रोत लेबलों को पादप रोग विशेषज्ञ ने प्रमाणित नहीं किया है। यह स्कोर सत्यापित रोग संभावना नहीं है; फसल उपचार के निर्णय के लिए इसका उपयोग न करें।</string>
+    <string name="research_sample_asset_missing">नमूना चित्र उपलब्ध नहीं है या पढ़ा नहीं जा सका। कोई विश्लेषण नहीं किया गया।</string>
+    <string name="research_loading_text_cotton">कपास पायलट (गुणवत्ता और पत्ती-जांच) से चित्र का विश्लेषण हो रहा है…</string>
+    <string name="research_disclaimer_body_cotton">केवल प्रायोगिक शोध मॉडल: मौजूदा छह-श्रेणी पाइपलाइन धान और मूंगफली के लिए है; अलग कपास बाइनरी पायलट अभी सत्यापित नहीं है। कोई भी शोध परिणाम सत्यापित उत्पादन निदान नहीं है। उत्पादन रिलीज़ गेट बंद है।</string>
+</resources>

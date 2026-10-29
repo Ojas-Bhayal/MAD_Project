@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/scanFragment">
+
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="com.cropdoc.app.ui.scan.ScanFragment"
+        android:label="@string/nav_scan" />
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.cropdoc.app.ui.result.ResultFragment"
+        android:label="@string/nav_result" />
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.cropdoc.app.ui.history.HistoryFragment"
+        android:label="@string/nav_history" />
+
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.cropdoc.app.ui.auth.AuthFragment"
+        android:label="@string/nav_account" />
+
+    <fragment
+        android:id="@+id/researchDemoFragment"
+        android:name="com.cropdoc.app.ui.research.ResearchDemoFragment"
+        android:label="@string/nav_research_demo" />
+</navigation>

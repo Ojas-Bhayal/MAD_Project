@@ -1,0 +1,254 @@
+{
+  "experiment_name": "unified_six_class_pilot",
+  "dataset_name": "cropdoc_unified_six_class_candidate",
+  "model_architecture": "mobilenet_v3_small",
+  "random_seed": 42,
+  "classes": [
+    {
+      "local_index": 0,
+      "global_index": 0,
+      "class_name": "rice_bacterial_leaf_blight",
+      "crop": "rice",
+      "source": "rice_mendeley_sethy_v2"
+    },
+    {
+      "local_index": 1,
+      "global_index": 1,
+      "class_name": "rice_brown_spot",
+      "crop": "rice",
+      "source": "rice_mendeley_sethy_v2"
+    },
+    {
+      "local_index": 2,
+      "global_index": 2,
+      "class_name": "rice_leaf_blast",
+      "crop": "rice",
+      "source": "rice_mendeley_sethy_v2"
+    },
+    {
+      "local_index": 3,
+      "global_index": 3,
+      "class_name": "rice_healthy",
+      "crop": "rice",
+      "source": "rice_mendeley_hasan_2023"
+    },
+    {
+      "local_index": 4,
+      "global_index": 16,
+      "class_name": "groundnut_early_leaf_spot",
+      "crop": "groundnut",
+      "source": "mendeley_groundnut_v3"
+    },
+    {
+      "local_index": 5,
+      "global_index": 17,
+      "class_name": "groundnut_healthy",
+      "crop": "groundnut",
+      "source": "mendeley_groundnut_v3"
+    }
+  ],
+  "hardware_environment": {
+    "python_version": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "cpu_count": 12,
+    "torch_version": "2.14.1+cpu",
+    "cuda_available_in_torch": false,
+    "device_used": "cpu",
+    "cpu_fallback_reason": "CUDA runtime not available on this CPU environment"
+  },
+  "training_duration_seconds": 205.19,
+  "dataset_counts": {
+    "train": 1030,
+    "val": 216,
+    "test": 256,
+    "total_canonical": 1502
+  },
+  "history": {
+    "train_loss": [
+      1.307376639472628,
+      0.5486073929129295,
+      0.25583168323178895,
+      0.14701821607293433,
+      0.10317914083744716,
+      0.07325552610807048,
+      0.05148467531481993,
+      0.06950703891880304
+    ],
+    "train_acc": [
+      0.6048543689320388,
+      0.8805825242718447,
+      0.9378640776699029,
+      0.9640776699029127,
+      0.9699029126213592,
+      0.9844660194174757,
+      0.9941747572815534,
+      0.9815533980582525
+    ],
+    "val_loss": [
+      1.1056914108770866,
+      0.5778894976333335,
+      0.3843870637593446,
+      0.26859756255591355,
+      0.17472266405820847,
+      0.1559536443264396,
+      0.13116957012701919,
+      0.12366837677028444
+    ],
+    "val_acc": [
+      0.5787037037037037,
+      0.8333333333333334,
+      0.8796296296296297,
+      0.9074074074074074,
+      0.9583333333333334,
+      0.9490740740740741,
+      0.9629629629629629,
+      0.9675925925925926
+    ]
+  },
+  "test_results": {
+    "overall_accuracy": 0.9844,
+    "macro_f1": 0.9714,
+    "confusion_matrix": [
+      [
+        39,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        15,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        22,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        23,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        29,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        124
+      ]
+    ],
+    "per_class": {
+      "rice_bacterial_leaf_blight": {
+        "local_index": 0,
+        "global_index": 0,
+        "support": 39,
+        "precision": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "f1_score": 1.0,
+        "tp": 39,
+        "fp": 0,
+        "fn": 0,
+        "tn": 217
+      },
+      "rice_brown_spot": {
+        "local_index": 1,
+        "global_index": 1,
+        "support": 15,
+        "precision": 0.8333,
+        "recall": 1.0,
+        "specificity": 0.9876,
+        "f1_score": 0.9091,
+        "tp": 15,
+        "fp": 3,
+        "fn": 0,
+        "tn": 238
+      },
+      "rice_leaf_blast": {
+        "local_index": 2,
+        "global_index": 2,
+        "support": 24,
+        "precision": 1.0,
+        "recall": 0.9167,
+        "specificity": 1.0,
+        "f1_score": 0.9565,
+        "tp": 22,
+        "fp": 0,
+        "fn": 2,
+        "tn": 232
+      },
+      "rice_healthy": {
+        "local_index": 3,
+        "global_index": 3,
+        "support": 23,
+        "precision": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "f1_score": 1.0,
+        "tp": 23,
+        "fp": 0,
+        "fn": 0,
+        "tn": 233
+      },
+      "groundnut_early_leaf_spot": {
+        "local_index": 4,
+        "global_index": 16,
+        "support": 31,
+        "precision": 1.0,
+        "recall": 0.9355,
+        "specificity": 1.0,
+        "f1_score": 0.9667,
+        "tp": 29,
+        "fp": 0,
+        "fn": 2,
+        "tn": 225
+      },
+      "groundnut_healthy": {
+        "local_index": 5,
+        "global_index": 17,
+        "support": 124,
+        "precision": 0.992,
+        "recall": 1.0,
+        "specificity": 0.9924,
+        "f1_score": 0.996,
+        "tp": 124,
+        "fp": 1,
+        "fn": 0,
+        "tn": 131
+      }
+    },
+    "source_wise_accuracy": {
+      "rice_mendeley_sethy_v2": 0.9744,
+      "rice_mendeley_hasan_2023": 1.0,
+      "mendeley_groundnut": 0.9871
+    }
+  },
+  "artifact_checksums_sha256": {
+    "best_model.pth": "78cd5e3cb72fce8aa7b91d06d4b61da1be5bb0c28dee728824baacac92f7ef20",
+    "model_traced_fp32.pt": "05d6c3dadb2b2af7c2e19ab94866864c674ab62e6c44872d756285aac65fea2b",
+    "model_quantized_int8.pt": "d85969d1a794e33070b9b84db5a45d193d891362b1b4deb7320915fb8a23b529",
+    "model_fp16.pth": "54724d9b749ced57407425f4cecebc0c7b5d74a92fd8dfdcae2d162714c035ca"
+  }
+}

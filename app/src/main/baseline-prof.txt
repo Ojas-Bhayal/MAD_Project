@@ -1,0 +1,10 @@
+HSPLcom/cropdoc/app/CropDocApplication;-><init>()V
+HSPLcom/cropdoc/app/CropDocApplication;->onCreate()V
+HSPLcom/cropdoc/app/di/AppContainer;-><init>(Landroid/content/Context;)V
+HSPLcom/cropdoc/app/di/AppExecutors;->createDefault()Lcom/cropdoc/app/di/AppExecutors;
+HSPLcom/cropdoc/app/ui/MainActivity;->onCreate(Landroid/os/Bundle;)V
+HSPLcom/cropdoc/app/ui/scan/ScanFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+HSPLcom/cropdoc/app/ui/scan/ScanFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+HSPLcom/cropdoc/app/ml/LeafPreprocessor;->cropReticleAndResize(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+HSPLcom/cropdoc/app/ml/LeafPreprocessor;->populateByteBufferAndComputeLeafRatio(Landroid/graphics/Bitmap;Ljava/nio/ByteBuffer;[I)F
+HSPLcom/cropdoc/app/ml/ConfidenceCalibrator;->evaluateLogits([FFJLjava/util/List;Ljava/lang/String;)Lcom/cropdoc/app/domain/model/DiagnosisResult;

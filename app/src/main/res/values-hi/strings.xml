@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">क्रॉपडॉक (CropDoc)</string>
+    <string name="nav_scan">पत्ती जांचें</string>
+    <string name="nav_result">परिणाम</string>
+    <string name="nav_history">इतिहास</string>
+    <string name="nav_account">खाता</string>
+
+    <string name="cd_camera_preview">फसल की पत्ती स्कैन करने के लिए कैमरा दृश्य</string>
+    <string name="cd_leaf_reticle">पत्ती को बीच में रखने का बॉक्स</string>
+    <string name="cd_leaf_thumbnail">सहेजी गई पत्ती की तस्वीर</string>
+
+    <string name="scan_reticle_instruction">दिन की रोशनी में एक प्रभावित पत्ती को बॉक्स के बीच में रखें</string>
+    <string name="btn_scan_leaf">फोटो लें और ऑफ़लाइन जांच करें</string>
+    <string name="btn_pick_from_gallery">गैलरी से पत्ती की फोटो चुनें</string>
+    <string name="btn_toggle_torch_off">फ्लैश: बंद</string>
+    <string name="btn_toggle_torch_on">फ्लैश: चालू</string>
+    <string name="error_camera_capture">फोटो नहीं ली जा सकी। पुनः प्रयास करें या गैलरी चुनें।</string>
+    <string name="error_image_decode_failed">पत्ती की फोटो पढ़ी नहीं जा सकी। कृपया दूसरी साफ फोटो चुनें।</string>
+    <string name="status_model_unavailable">निदान वर्तमान में अनुपलब्ध है। एक सत्यापित मॉडल अपडेट की आवश्यकता है।</string>
+    <string name="status_model_unavailable_debug">एक सत्यापित उत्पादन मॉडल अभी तक बंडल नहीं किया गया है। अनुसंधान डेमो देखें।</string>
+    <string name="action_open_research_demo">अनुसंधान डेमो</string>
+    <string name="action_dismiss">खारिज करें</string>
+    <string name="debug_model_unavailable_title">उत्पादन मॉडल अनुपलब्ध</string>
+    <string name="debug_model_unavailable_message">एक सत्यापित उत्पादन मॉडल अभी तक बंडल नहीं किया गया है। आप प्रायोगिक पाइपलाइन का परीक्षण करने के लिए अनुसंधान डेमो पर जा सकते हैं।</string>
+    <string name="status_image_rejected">छवि स्वीकार नहीं की जा सकी। कृपया अच्छी रोशनी और फोकस के साथ दोबारा फोटो लें।</string>
+    <string name="status_low_confidence_retake">कम विश्वास निदान। कृपया बेहतर फोकस और रोशनी के साथ दोबारा फोटो लें।</string>
+    <string name="permission_camera_rationale">सीधे पत्ती स्कैन करने के लिए कैमरा अनुमति दें, या नीचे गैलरी से फोटो चुनें।</string>
+    <string name="action_grant_camera">कैमरा अनुमति दें</string>
+    <string name="action_open_settings">ऐप सेटिंग्स खोलें</string>
+
+    <string name="confidence_format">सटीकता विश्वास: %1$d%%</string>
+    <string name="banner_low_confidence" formatted="false">कम विश्वास (&lt;65%) — कोई रासायनिक दवा न छिड़कें। साफ रोशनी में केवल एक पत्ती की दोबारा फोटो लें।</string>
+    <string name="banner_not_a_leaf">समर्थित फसल की पत्ती नहीं मिली (धान, टमाटर, आलू, कपास, मक्का)। कृपया पत्ती को बॉक्स में रखें।</string>
+    <string name="error_result_not_found">स्कैन परिणाम लोड नहीं हो सका। कृपया दोबारा स्कैन करें।</string>
+
+    <string name="btn_listen_audio_advice">सलाह सुनें (ऑफ़लाइन आवाज़)</string>
+    <string name="heading_causes">1. रोग के कारण और लक्षण</string>
+    <string name="heading_cultural_bio">2. जैविक और कृषि प्रबंधन (IPM प्राथमिक)</string>
+    <string name="heading_chemical_cibrc">3. CIB&amp;RC अनुमोदित रासायनिक उपाय (गंभीर होने पर)</string>
+    <string name="heading_prevention">4. रोकथाम के उपाय</string>
+    <string name="kvk_safety_disclaimer">केवल परामर्श हेतु (ICAR/CABI/CIB&amp;RC)। छिड़काव से पहले सुरक्षा किट (PPE) पहनें और नजदीकी कृषि विज्ञान केंद्र (KVK) से मात्रा की पुष्टि करें।</string>
+
+    <string name="btn_feedback_helpful">सही पहचान (👍)</string>
+    <string name="btn_feedback_unhelpful">गलत पहचान (👎)</string>
+    <string name="feedback_saved_message">धन्यवाद! आपकी प्रतिक्रिया दर्ज कर ली गई है।</string>
+    <string name="btn_retake_photo">दूसरी पत्ती जांचें</string>
+
+    <string name="btn_delete_all_data_dpdp">सभी सहेजे गए स्कैन हटाएं (DPDP गोपनीयता अधिकार)</string>
+    <string name="empty_history_message" formatted="false">अभी तक कोई स्कैन नहीं है। यह ऐप बिना इंटरनेट 100% ऑफ़लाइन काम करता है।</string>
+    <string name="btn_empty_scan_cta">पहली पत्ती स्कैन करें</string>
+    <string name="status_synced">क्लाउड पर सुरक्षित</string>
+    <string name="status_saved_offline">फ़ोन में ऑफ़लाइन सुरक्षित</string>
+    <string name="confirm_delete_history_title">सभी स्कैन हटाएं?</string>
+    <string name="confirm_delete_history_body">यह आपके फोन और क्लाउड से सभी सहेजी गई पत्ती की तस्वीरें और रिकॉर्ड स्थायी रूप से हटा देगा।</string>
+
+    <string name="status_guest_mode_active" formatted="false">मोड: ऑफ़लाइन मेहमान (100% फोन पर सुरक्षित)</string>
+    <string name="status_signed_in_as">लॉग इन: %1$s</string>
+    <string name="btn_toggle_dpdp_notice">DPDP गोपनीयता सूचना (पढ़ने के लिए टैप करें)</string>
+    <string name="auth_consent_notice_dpdp">वैकल्पिक क्लाउड बैकअप (DPDP अधिनियम सूचना): केवल तभी साइन इन करें जब आप GPS हटाए गए पत्ती के फोटो को बैकअप करने की सहमति देते हैं। गेस्ट मोड में सारा डेटा आपके फोन पर रहता है।</string>
+    <string name="hint_email">ईमेल पता</string>
+    <string name="hint_password">पासवर्ड (कम से कम 6 अक्षर)</string>
+    <string name="btn_sign_in_email">ईमेल से साइन इन करें</string>
+    <string name="btn_register_email">नया खाता बनाएं</string>
+    <string name="btn_forgot_password">पासवर्ड भूल गए?</string>
+    <string name="btn_sign_in_google">गूगल से साइन इन करें</string>
+    <string name="btn_continue_guest_offline" formatted="false">मेहमान (Guest) के रूप में 100% ऑफ़लाइन जारी रखें</string>
+    <string name="btn_sign_out">साइन आउट करें</string>
+    <string name="btn_delete_account_dpdp">खाता और क्लाउड डेटा हटाएं (DPDP अधिकार)</string>
+    <string name="confirm_delete_account_title">खाता और डेटा हटाएं?</string>
+    <string name="confirm_delete_account_body">यह भारत के DPDP अधिनियम के तहत आपके खाते, फोन की फोटो और क्लाउड रिकॉर्ड को स्थायी रूप से हटा देगा।</string>
+    <string name="action_cancel">रद्द करें</string>
+    <string name="action_confirm_delete">स्थायी रूप से हटाएं</string>
+    <string name="error_invalid_email">कृपया सही ईमेल पता दर्ज करें।</string>
+    <string name="error_short_password">पासवर्ड कम से कम 6 अक्षरों का होना चाहिए।</string>
+    <string name="error_google_sign_in">गूगल साइन-इन पूरा नहीं हो सका। ऑफ़लाइन गेस्ट मोड का उपयोग करें।</string>
+    <string name="msg_password_reset_sent">पासवर्ड रीसेट लिंक आपके ईमेल पर भेजा गया है।</string>
+    <string name="msg_signed_out">साइन आउट हो गया। ऑफ़लाइन गेस्ट मोड सक्रिय है।</string>
+    <string name="msg_account_deleted">खाता और सभी स्कैन डेटा स्थायी रूप से हटा दिए गए हैं।</string>
+
+    <string name="feedback_wrong_dialog_title">गलत पहचान की रिपोर्ट करें?</string>
+    <string name="feedback_wrong_dialog_body">गलत परिणाम की सूचना देने से स्थानीय फसलों के लिए क्रॉपडॉक को सुधारने में मदद मिलती है।</string>
+    <string name="feedback_wrong_saved_message">गलत पहचान के रूप में दर्ज किया गया। आपकी प्रतिक्रिया के लिए धन्यवाद!</string>
+    <plurals name="history_scan_count">
+        <item quantity="one">%1$d स्कैन सुरक्षित है</item>
+        <item quantity="other">%1$d स्कैन सुरक्षित हैं</item>
+    </plurals>
+
+    <!-- Research Demo Strings (Debug Only) - Hindi -->
+    <string name="nav_research_demo">अनुसंधान</string>
+    <string name="research_disclaimer_title">⚠️ प्रायोगिक शोध मॉडल (केवल डेमो)</string>
+    <string name="research_disclaimer_body">वैज्ञानिक मूल्यांकन के लिए दोहरे LiteRT FP32 शोध मॉडल (फसल क्षेत्र गेट और 6-श्रेणी रोग वर्गीकरण) सक्रिय हैं। ये प्रायोगिक मॉडल मुख्य ऐप से पूरी तरह अलग हैं और वास्तविक कृषि निदान या सलाह के लिए मान्य नहीं हैं। उत्पादन रिलीज गेट सुरक्षित रूप से बंद है।</string>
+    <string name="research_disabled_in_release">शोध डेमो केवल डिबग मोड में उपलब्ध है, रिलीज संस्करण में बंद है।</string>
+    <string name="research_models_unavailable_warning">वर्तमान डिवाइस पर नेटिव LiteRT मॉडल उपलब्ध नहीं हैं। सुरक्षित रोकथाम सक्रिय है।</string>
+
+    <string name="btn_capture_research_photo">शोध के लिए फ़ोटो खींचें</string>
+    <string name="btn_pick_research_image">गैलरी से फोटो चुनें</string>
+    <string name="btn_sample_rice">नमूना: धान की पत्ती</string>
+    <string name="btn_sample_soil">नमूना: बिना पत्ती की मिट्टी</string>
+    <string name="btn_run_research_inference">शोध विश्लेषण चलाएं</string>
+    <string name="btn_retry_research">पुनः प्रयास करें</string>
+
+    <string name="research_preview_placeholder">कोई फोटो नहीं चुनी गई।\nशुरू करने के लिए गैलरी से फोटो चुनें या नमूना चुनें।</string>
+    <string name="research_loading_text">5-चरणीय शोध पाइपलाइन के माध्यम से विश्लेषण जारी है…</string>
+    <string name="research_card_results_title">बहु-चरणीय शोध पाइपलाइन परिणाम</string>
+
+    <string name="research_stage_quality_hdr">चरण 1: छवि गुणवत्ता जांच</string>
+    <string name="research_stage_foliar_hdr">चरण 2: पत्ती कवरेज जांच</string>
+    <string name="research_stage_domain_hdr">चरण 3: फसल क्षेत्र जांच (3 श्रेणियां)</string>
+    <string name="research_stage_disease_hdr">चरण 4: 6-श्रेणी शोध रोग मॉडल</string>
+    <string name="research_stage_decision_hdr">चरण 5: अंशांकित सुरक्षा निर्णय</string>
+    <string name="research_latency_summary_hdr">समय और निष्पादन मेट्रिक्स</string>
+    <string name="research_taxonomy_title">अलग शोध वर्गीकरण (6 श्रेणियां)</string>
+    <string name="research_taxonomy_content">धान (वैश्विक 0–3): 0: BLB | 1: भूरा धब्बा | 2: ब्लास्ट | 3: स्वस्थ\nमूंगफली (वैश्विक 16–17): 4: अगेती टिक्का (#16) | 5: स्वस्थ (#17)</string>
+
+    <string name="research_status_passed">सफल</string>
+    <string name="research_status_rejected">अस्वीकृत</string>
+    <string name="research_status_bypassed">छोड़ दिया गया</string>
+    <string name="research_status_not_run">नहीं चला</string>
+    <string name="research_status_inconclusive">अनिर्णायक स्थिति</string>
+    <string name="research_status_error">त्रुटि</string>
+
+    <string name="research_status_quality_passed">सफल: छवि का आकार और रोशनी सही है</string>
+    <string name="research_status_quality_rejected">गुणवत्ता जांच में अस्वीकृत: %1$s</string>
+    <string name="research_status_foliar_passed">सफल: पत्ती कवरेज >= 18% सीमा पूरी हुई</string>
+    <string name="research_status_foliar_rejected">पत्ती कवरेज में अस्वीकृत: %1$s</string>
+
+    <string name="research_status_domain_bypassed">नहीं चला: पूर्ववर्ती जांच ने आगे की प्रक्रिया रोक दी</string>
+    <string name="research_status_domain_passed_fmt">सफल: फसल: %1$s (%2$d%% विश्वास)</string>
+    <string name="research_status_domain_unsupported_fmt">अस्वीकृत: असमर्थित फसल पहचानी गई (%1$d%% विश्वास)</string>
+    <string name="research_status_domain_uncertain_fmt">अस्वीकृत: अनिश्चित फसल क्षेत्र (%1$d%% विश्वास)</string>
+    <string name="research_status_domain_unavailable">अस्वीकृत: फसल क्षेत्र मॉडल अनुपलब्ध है</string>
+
+    <string name="research_status_disease_bypassed">छोड़ दिया गया: पूर्ववर्ती जांच ने पाइपलाइन रोकी (सुरक्षित रोकथाम)</string>
+    <string name="research_status_disease_executed_fmt">निष्पादित: %1$s (स्थानीय #%2$d -> वैश्विक #%3$d, %4$d%%)</string>
+
+    <string name="research_status_decision_accepted">शोध भविष्यवाणी — प्रायोगिक (%1$s)</string>
+    <string name="research_status_decision_rejected">रोक दिया गया / अस्वीकृत (%1$s)</string>
+
+    <string name="research_status_latency_fmt">कुल: %1$d ms | फसल क्षेत्र: %2$s | रोग मॉडल: %3$s</string>
+    <string name="research_latency_ms_fmt">%1$d ms</string>
+
+    <string name="crop_rice">धान</string>
+    <string name="crop_groundnut">मूंगफली</string>
+    <string name="crop_unsupported">असमर्थित फसल</string>
+
+    <string name="disease_rice_bacterial_blight">धान का जीवाणु पत्ती झुलसा (BLB)</string>
+    <string name="disease_rice_brown_spot">धान का भूरा धब्बा</string>
+    <string name="disease_rice_blast">धान का झोंका रोग (ब्लास्ट)</string>
+    <string name="disease_rice_healthy">स्वस्थ धान</string>
+    <string name="disease_groundnut_early_leaf_spot">मूंगफली का अगेती टिक्का रोग</string>
+    <string name="disease_groundnut_healthy">स्वस्थ मूंगफली</string>
+
+    <string name="outcome_accepted_supported">स्वीकृत</string>
+    <string name="outcome_inconclusive_low_conf">कम विश्वास (अनिर्णायक)</string>
+    <string name="outcome_out_of_domain">कार्यक्षेत्र से बाहर</string>
+    <string name="outcome_invalid_model_output">अमान्य आउटपुट</string>
+    <string name="outcome_model_unavailable">मॉडल अनुपलब्ध</string>
+
+    <string name="rejection_detail_foliar_non_leaf">पत्ती का क्षेत्रफल आवश्यक 18% सीमा से कम है (पत्ती नहीं है)।</string>
+    <string name="rejection_detail_unsupported_crop">फसल क्षेत्र जांच द्वारा असमर्थित वनस्पति नमूना अस्वीकार किया गया।</string>
+    <string name="rejection_detail_domain_uncertain">फसल क्षेत्र विश्वास आवश्यक 65% सीमा से कम है।</string>
+    <string name="rejection_detail_low_confidence">रोग पहचान का विश्वास अंशांकित सीमा से कम है।</string>
+    <string name="rejection_detail_high_entropy">भविष्यवाणी की अनिश्चितता (एंट्रॉपी) सुरक्षा सीमा से अधिक है।</string>
+    <string name="rejection_detail_model_unavailable">इस डिवाइस पर शोध मॉडल उपलब्ध नहीं हैं।</string>
+    <string name="research_decision_accepted_explanation">अंशांकित विश्वास सीमा के भीतर प्रायोगिक शोध निदान की पुष्टि। खेत में रासायनिक उपचार के लिए नहीं।</string>
+
+    <string name="research_error_title">विश्लेषण त्रुटि</string>
+    <string name="research_error_open_image">चुनी गई फोटो फ़ाइल नहीं खोली जा सकी।</string>
+    <string name="research_error_decode_failed">फोटो पढ़ी नहीं जा सकी। कृपया स्पष्ट JPG या PNG फोटो चुनें।</string>
+    <string name="research_error_inference_failed">पाइपलाइन निष्पादन के दौरान शोध विश्लेषण विफल रहा।</string>
+    <string name="research_error_no_image_selected">कोई फोटो नहीं चुनी गई। कृपया पहले एक फोटो चुनें।</string>
+    <string name="research_camera_permission_denied_title">कैमरा अनुमति आवश्यक है</string>
+    <string name="research_camera_permission_denied_msg">शोध के लिए फ़ोटो खींचने के लिए कैमरा अनुमति आवश्यक है। कृपया कैमरा एक्सेस प्रदान करें।</string>
+
+    <!-- Cotton binary output is research-only and is not a validated diagnosis. -->
+    <string name="disease_cotton_bacterial_blight">कपास का जीवाणु झुलसा (प्रायोगिक लेबल)</string>
+    <string name="disease_cotton_healthy">स्वस्थ कपास (प्रायोगिक लेबल)</string>
+    <string name="research_status_cotton_experimental_fmt">कपास शोध पायलट: %1$s (मॉडल स्कोर %2$d%%; कैलिब्रेटेड नहीं)</string>
+</resources>

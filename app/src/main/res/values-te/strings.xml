@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">క్రాప్‌డాక్ (CropDoc)</string>
+    <string name="nav_scan">ఆకు స్కాన్</string>
+    <string name="nav_result">నిర్ధారణ</string>
+    <string name="nav_history">చరిత్ర</string>
+    <string name="nav_account">ఖాతా</string>
+
+    <string name="cd_camera_preview">పంట ఆకును స్కాన్ చేయడానికి కెమెరా వ్యూ</string>
+    <string name="cd_leaf_reticle">ఆకును మధ్యలో ఉంచే పెట్టె</string>
+    <string name="cd_leaf_thumbnail">సేవ్ చేసిన ఆకు చిత్రం</string>
+
+    <string name="scan_reticle_instruction">పగటి వెలుతురులో తెగులు సోకిన ఒక ఆకును పెట్టె మధ్యలో ఉంచండి</string>
+    <string name="btn_scan_leaf">ఫోటో తీసి ఆఫ్‌లైన్‌లో పరీక్షించండి</string>
+    <string name="btn_pick_from_gallery">గ్యాలరీ నుండి ఆకు ఫోటో ఎంచుకోండి</string>
+    <string name="btn_toggle_torch_off">ఫ్లాష్: ఆఫ్</string>
+    <string name="btn_toggle_torch_on">ఫ్లాష్: ఆన్</string>
+    <string name="error_camera_capture">ఫోటో తీయడం సాధ్యం కాలేదు. మళ్లీ ప్రయత్నించండి.</string>
+    <string name="error_image_decode_failed">ఆకు ఫోటోను చదవడం సాధ్యం కాలేదు. దయచేసి మరొక స్పష్టమైన ఫోటోను ఎంచుకోండి.</string>
+    <string name="status_model_unavailable">రోగ నిర్ధారణ ప్రస్తుతం అందుబాటులో లేదు. ధృవీకరించబడిన మోడల్ నవీకరణ అవసరం.</string>
+    <string name="status_model_unavailable_debug">ధృవీకరించబడిన ప్రొడక్షన్ మోడల్ ఇంకా చేర్చబడలేదు. రీసెర్చ్ డెమోని అన్వేషించండి.</string>
+    <string name="action_open_research_demo">రీసెర్చ్ డెమో</string>
+    <string name="action_dismiss">తీసివేయి</string>
+    <string name="debug_model_unavailable_title">ప్రొడక్షన్ మోడల్ అందుబాటులో లేదు</string>
+    <string name="debug_model_unavailable_message">ధృవీకరించబడిన ప్రొడక్షన్ మోడల్ ఇంకా చేర్చబడలేదు. ప్రయోగాత్మక పైప్‌లైన్‌ను అంచనా వేయడానికి మీరు రీసెర్చ్ డెమోకి నావిగేట్ చేయవచ్చు.</string>
+    <string name="status_image_rejected">చిత్రం ఆమోదించబడలేదు. దయచేసి సరైన వెలుతురు మరియు స్పష్టతతో మళ్ళీ ఫోటో తీయండి.</string>
+    <string name="status_low_confidence_retake">తక్కువ ఖచ్చితత్వ నిర్ధారణ. దయచేసి మెరుగైన ఫోకస్ మరియు వెలుతురుతో మళ్ళీ ఫోటో తీయండి.</string>
+    <string name="permission_camera_rationale">ఆకును నేరుగా స్కాన్ చేయడానికి కెమెరా అనుమతి ఇవ్వండి, లేదా క్రింద గ్యాలరీ నుండి ఫోటోను ఎంచుకోండి.</string>
+    <string name="action_grant_camera">కెమెరా అనుమతి ఇవ్వండి</string>
+    <string name="action_open_settings">యాప్ సెట్టింగ్‌లు తెరవండి</string>
+
+    <string name="confidence_format">నిర్ధారణ నమ్మకం: %1$d%%</string>
+    <string name="banner_low_confidence" formatted="false">తక్కువ నమ్మకం (&lt;65%) — రసాయన మందులు పిచికారీ చేయవద్దు. మంచి వెలుతురులో మళ్లీ ఫోటో తీయండి.</string>
+    <string name="banner_not_a_leaf">మద్దతు ఉన్న పంట ఆకు కనిపించలేదు (వరి, టమాట, బంగాళాదుంప, పత్తి, మొక్కజొన్న). ఒక ఆకును స్పష్టంగా పెట్టెలో ఉంచండి.</string>
+    <string name="error_result_not_found">స్కాన్ వివరాలను లోడ్ చేయడం సాధ్యం కాలేదు. దయచేసి మళ్లీ స్కాన్ చేయండి.</string>
+
+    <string name="btn_listen_audio_advice">సలహా వినండి (ఆఫ్‌లైన్ వాయిస్)</string>
+    <string name="heading_causes">1. తెగులు కారణాలు &amp; లక్షణాలు</string>
+    <string name="heading_cultural_bio">2. సేంద్రియ &amp; జీవ నియంత్రణ (IPM మొదటి ప్రాధాన్యత)</string>
+    <string name="heading_chemical_cibrc">3. CIB&amp;RC అనుమతించిన రసాయన మందులు (తీవ్రంగా ఉంటేనే)</string>
+    <string name="heading_prevention">4. నివారణ చర్యలు</string>
+    <string name="kvk_safety_disclaimer">సలహా మాత్రమే (ICAR/CABI/CIB&amp;RC). పిచికారీ చేసే ముందు రక్షణ కవచం (PPE) ధరించండి మరియు సమీప కృషి విజ్ఞాన కేంద్రం (KVK) అధికారిని సంప్రదించండి.</string>
+
+    <string name="btn_feedback_helpful">సరైన నిర్ధారణ (👍)</string>
+    <string name="btn_feedback_unhelpful">తప్పు నిర్ధారణ (👎)</string>
+    <string name="feedback_saved_message">ధన్యవాదాలు! మీ అభిప్రాయం నమోదు చేయబడింది.</string>
+    <string name="btn_retake_photo">మరొక ఆకును స్కాన్ చేయండి</string>
+
+    <string name="btn_delete_all_data_dpdp">సేవ్ చేసిన అన్ని స్కాన్‌లను తొలగించండి (DPDP గోప్యతా హక్కు)</string>
+    <string name="empty_history_message" formatted="false">ఇంకా స్కాన్‌లు లేవు. ఈ యాప్ ఇంటర్నెట్ లేకుండా 100% ఆఫ్‌లైన్‌లో పనిచేస్తుంది.</string>
+    <string name="btn_empty_scan_cta">మొదటి ఆకును స్కాన్ చేయండి</string>
+    <string name="status_synced">క్లౌడ్‌లో భద్రపరచబడింది</string>
+    <string name="status_saved_offline">ఫోన్‌లో ఆఫ్‌లైన్‌లో సేవ్ చేయబడింది</string>
+    <string name="confirm_delete_history_title">అన్ని స్కాన్‌లను తొలగించాలా?</string>
+    <string name="confirm_delete_history_body">ఇది మీ ఫోన్ మరియు క్లౌడ్ నుండి సేవ్ చేసిన అన్ని ఆకు ఫోటోలు మరియు రికార్డులను శాశ్వతంగా తొలగిస్తుంది.</string>
+
+    <string name="status_guest_mode_active" formatted="false">మోడ్: ఆఫ్‌లైన్ అతిథి (100% ఫోన్‌లోనే భద్రం)</string>
+    <string name="status_signed_in_as">సైన్ ఇన్ చేశారు: %1$s</string>
+    <string name="btn_toggle_dpdp_notice">DPDP గోప్యతా చట్టం నోటీసు (చదవడానికి నొక్కండి)</string>
+    <string name="auth_consent_notice_dpdp">ఐచ్ఛిక క్లౌడ్ బ్యాకప్ (DPDP చట్టం నోటీసు): GPS తొలగించిన ఆకు ఫోటోలను క్లౌడ్‌లో బ్యాకప్ చేయడానికి సమ్మతిస్తేనే సైన్ ఇన్ చేయండి. గెస్ట్ మోడ్‌లో మొత్తం డేటా మీ ఫోన్‌లోనే ఉంటుంది.</string>
+    <string name="hint_email">ఇమెయిల్ చిరునామా</string>
+    <string name="hint_password">పాస్‌వర్డ్ (కనీసం 6 అక్షరాలు)</string>
+    <string name="btn_sign_in_email">ఇమెయిల్‌తో సైన్ ఇన్ చేయండి</string>
+    <string name="btn_register_email">కొత్త ఖాతాను సృష్టించండి</string>
+    <string name="btn_forgot_password">పాస్‌వర్డ్ మర్చిపోయారా?</string>
+    <string name="btn_sign_in_google">గూగుల్‌తో సైన్ ఇన్ చేయండి</string>
+    <string name="btn_continue_guest_offline" formatted="false">అతిథిగా (Guest) 100% ఆఫ్‌లైన్‌లో కొనసాగండి</string>
+    <string name="btn_sign_out">సైన్ అవుట్</string>
+    <string name="btn_delete_account_dpdp">ఖాతా &amp; క్లౌడ్ డేటా తొలగించండి (DPDP హక్కు)</string>
+    <string name="confirm_delete_account_title">ఖాతా &amp; డేటాను తొలగించాలా?</string>
+    <string name="confirm_delete_account_body">ఇది భారత DPDP చట్టం ప్రకారం మీ ఖాతా, ఫోన్‌లోని ఆకు ఫోటోలు మరియు క్లౌడ్ రికార్డులను శాశ్వతంగా తొలగిస్తుంది.</string>
+    <string name="action_cancel">రద్దు చేయండి</string>
+    <string name="action_confirm_delete">శాశ్వతంగా తొలగించు</string>
+    <string name="error_invalid_email">దయచేసి సరైన ఇమెయిల్ చిరునామాను నమోదు చేయండి.</string>
+    <string name="error_short_password">పాస్‌వర్డ్ కనీసం 6 అక్షరాలు ఉండాలి.</string>
+    <string name="error_google_sign_in">గూగుల్ సైన్-ఇన్ పూర్తి కాలేదు. ఆఫ్‌లైన్ గెస్ట్ మోడ్‌ని ఉపయోగించండి.</string>
+    <string name="msg_password_reset_sent">పాస్‌వర్డ్ రీసెట్ లింక్ మీ ఇమెయిల్‌కు పంపబడింది.</string>
+    <string name="msg_signed_out">సైన్ అవుట్ అయ్యారు. ఆఫ్‌లైన్ గెస్ట్ మోడ్ సక్రియంగా ఉంది.</string>
+    <string name="msg_account_deleted">ఖాతా మరియు అన్ని స్కాన్ డేటా శాశ్వతంగా తొలగించబడ్డాయి.</string>
+
+    <string name="feedback_wrong_dialog_title">తప్పు నిర్ధారణను నివేదించాలా?</string>
+    <string name="feedback_wrong_dialog_body">తప్పు ఫలితాన్ని నివేదించడం వల్ల స్థానిక పంటల కోసం క్రాప్‌డాక్ మోడల్‌ను మెరుగుపరచవచ్చు.</string>
+    <string name="feedback_wrong_saved_message">తప్పు నిర్ధారణగా నమోదు చేయబడింది. మీ అభిప్రాయానికి ధన్యవాదాలు!</string>
+    <plurals name="history_scan_count">
+        <item quantity="one">%1$d స్కాన్ సేవ్ చేయబడింది</item>
+        <item quantity="other">%1$d స్కాన్‌లు సేవ్ చేయబడ్డాయి</item>
+    </plurals>
+
+    <!-- Research Demo Strings (Debug Only) - Telugu -->
+    <string name="nav_research_demo">పరిశోధన</string>
+    <string name="research_disclaimer_title">⚠️ ప్రయోగాత్మక పరిశోధనా మోడల్స్ (డెమో మాత్రమే)</string>
+    <string name="research_disclaimer_body">శాస్త్రీయ మూల్యాంకనం కోసం రెండు LiteRT FP32 పరిశోధనా మోడల్స్ (పంట విభాగ గేట్ &amp; 6-తరగతుల తెగులు వర్గీకరణ) అందుబాటులో ఉన్నాయి. ఇవి క్షేత్రస్థాయి పంట నిర్ధారణకు ధృవీకరించబడలేదు. ఉత్పత్తి విడుదల గేట్ లాక్ చేయబడింది.</string>
+    <string name="research_disabled_in_release">పరిశోధనా డెమో రిలీజ్ బిల్డ్‌లలో నిలిపివేయబడింది.</string>
+    <string name="research_models_unavailable_warning">ప్రస్తుత పరికరంలో స్థానిక LiteRT మోడల్స్ అందుబాటులో లేవు. రక్షణ వ్యవస్థ సక్రియంగా ఉంది.</string>
+
+    <string name="btn_capture_research_photo">పరిశోధన కోసం ఫోటో తీయండి</string>
+    <string name="btn_pick_research_image">గ్యాలరీ నుండి చిత్రం ఎంచుకోండి</string>
+    <string name="btn_sample_rice">నమూనా: వరి ఆకు</string>
+    <string name="btn_sample_soil">నమూనా: ఆకు లేని మట్టి</string>
+    <string name="btn_run_research_inference">పరిశోధనా విశ్లేషణను ప్రారంభించండి</string>
+    <string name="btn_retry_research">మళ్ళీ ప్రయత్నించండి</string>
+
+    <string name="research_preview_placeholder">చిత్రం ఎంచుకోబడలేదు.\nప్రారంభించడానికి గ్యాలరీ నుండి చిత్రాన్ని ఎంచుకోండి లేదా నమూనాను ఎంచుకోండి.</string>
+    <string name="research_loading_text">5-దశల పరిశోధనా పైప్‌లైన్ ద్వారా చిత్రాన్ని విశ్లేషిస్తోంది…</string>
+    <string name="research_card_results_title">బహుళ-దశల పరిశోధనా పైప్‌లైన్ ఫలితాలు</string>
+
+    <string name="research_stage_quality_hdr">దశ 1: చిత్ర నాణ్యత గేట్</string>
+    <string name="research_stage_foliar_hdr">దశ 2: ఆకు కవరేజ్ గేట్</string>
+    <string name="research_stage_domain_hdr">దశ 3: పంట విభాగ గేట్ (3 వర్గాలు)</string>
+    <string name="research_stage_disease_hdr">దశ 4: 6-తరగతుల పరిశోధనా తెగులు మోడల్</string>
+    <string name="research_stage_decision_hdr">దశ 5: క్రమాంకనం చేసిన భద్రతా నిర్ణయం</string>
+    <string name="research_latency_summary_hdr">సమయం &amp; అమలు గణాంకాలు</string>
+    <string name="research_taxonomy_title">ప్రత్యేక పరిశోధనా వర్గీకరణ (6 తరగతులు)</string>
+    <string name="research_taxonomy_content">వరి (గ్లోబల్ 0–3): 0: BLB | 1: గోధుమ మచ్చ | 2: బ్లాస్ట్ | 3: ఆరోగ్యకరం\nవేరుశనగ (గ్లోబల్ 16–17): 4: తిక్కా ఆకుమచ్చ (#16) | 5: ఆరోగ్యకరం (#17)</string>
+
+    <string name="research_status_passed">పాస్ అయింది</string>
+    <string name="research_status_rejected">తిరస్కరించబడింది</string>
+    <string name="research_status_bypassed">దాటవేయబడింది</string>
+    <string name="research_status_not_run">రన్ కాలేదు</string>
+    <string name="research_status_inconclusive">అనిశ్చిత పరిస్థితి</string>
+    <string name="research_status_error">లోపం</string>
+
+    <string name="research_status_quality_passed">పాస్ అయింది: చిత్రం కొలతలు &amp; వెలుతురు ధృవీకరించబడ్డాయి</string>
+    <string name="research_status_quality_rejected">నాణ్యత గేట్ తిరస్కరించింది: %1$s</string>
+    <string name="research_status_foliar_passed">పాస్ అయింది: ఆకు కవరేజ్ >= 18% పరిమితిని చేరింది</string>
+    <string name="research_status_foliar_rejected">ఆకు కవరేజ్ తిరస్కరించింది: %1$s</string>
+
+    <string name="research_status_domain_bypassed">రన్ కాలేదు: మునుపటి గేట్ ప్రక్రియను నిలిపివేసింది</string>
+    <string name="research_status_domain_passed_fmt">పాస్ అయింది: పంట: %1$s (%2$d%% ఖచ్చితత్వం)</string>
+    <string name="research_status_domain_unsupported_fmt">తిరస్కరించబడింది: మద్దతు లేని పంట గుర్తించబడింది (%1$d%% ఖచ్చితత్వం)</string>
+    <string name="research_status_domain_uncertain_fmt">తిరస్కరించబడింది: అనిశ్చిత పంట విభాగం (%1$d%% ఖచ్చితత్వం)</string>
+    <string name="research_status_domain_unavailable">తిరస్కరించబడింది: పంట విభాగ మోడల్ అందుబాటులో లేదు</string>
+
+    <string name="research_status_disease_bypassed">దాటవేయబడింది: మునుపటి గేట్ ప్రక్రియను నిలిపివేసింది (సురక్షిత రక్షణ)</string>
+    <string name="research_status_disease_executed_fmt">అమలయింది: %1$s (స్థానిక #%2$d -> అంతర్జాతీయ #%3$d, %4$d%%)</string>
+
+    <string name="research_status_decision_accepted">పరిశోధనా అంచనా — ప్రయోగాత్మకం (%1$s)</string>
+    <string name="research_status_decision_rejected">నియంత్రించబడింది / తిరస్కరించబడింది (%1$s)</string>
+
+    <string name="research_status_latency_fmt">మొత్తం: %1$d ms | పంట విభాగం: %2$s | తెగులు మోడల్: %3$s</string>
+    <string name="research_latency_ms_fmt">%1$d ms</string>
+
+    <string name="crop_rice">వరి</string>
+    <string name="crop_groundnut">వేరుశనగ</string>
+    <string name="crop_unsupported">మద్దతు లేని పంట</string>
+
+    <string name="disease_rice_bacterial_blight">వరి బాక్టీరియల్ ఆకు ఎండు తెగులు (BLB)</string>
+    <string name="disease_rice_brown_spot">వరి గోధుమ రంగు మచ్చ తెగులు</string>
+    <string name="disease_rice_blast">వరి అగ్గి తెగులు (బ్లాస్ట్)</string>
+    <string name="disease_rice_healthy">ఆరోగ్యకరమైన వరి</string>
+    <string name="disease_groundnut_early_leaf_spot">వేరుశనగ ముందస్తు ఆకుమచ్చ తెగులు (తిక్కా)</string>
+    <string name="disease_groundnut_healthy">ఆరోగ్యకరమైన వేరుశనగ</string>
+
+    <string name="outcome_accepted_supported">ఆమోదించబడింది</string>
+    <string name="outcome_inconclusive_low_conf">తక్కువ ఖచ్చితత్వం (అనిశ్చితం)</string>
+    <string name="outcome_out_of_domain">పరిధి వెలుపల</string>
+    <string name="outcome_invalid_model_output">చెల్లని అవుట్‌పుట్</string>
+    <string name="outcome_model_unavailable">మోడల్ అందుబాటులో లేదు</string>
+
+    <string name="rejection_detail_foliar_non_leaf">ఆకు కవరేజ్ నిష్పత్తి అవసరమైన 18% పరిమితి కంటే తక్కువగా ఉంది (ఆకు కాదు).</string>
+    <string name="rejection_detail_unsupported_crop">పంట విభాగ గేట్ ద్వారా మద్దతు లేని పంట తిరస్కరించబడింది.</string>
+    <string name="rejection_detail_domain_uncertain">పంట విభాగ ఖచ్చితత్వం అవసరమైన 65% పరిమితి కంటే తక్కువగా ఉంది.</string>
+    <string name="rejection_detail_low_confidence">తెగులు నిర్ధారణ ఖచ్చితత్వం అవసరమైన పరిమితి కంటే తక్కువగా ఉంది.</string>
+    <string name="rejection_detail_high_entropy">అంచనా అనిశ్చితి భద్రతా పరిమితిని మించిపోయింది.</string>
+    <string name="rejection_detail_model_unavailable">ఈ పరికరంలో పరిశోధనా మోడల్స్ అందుబాటులో లేవు.</string>
+    <string name="research_decision_accepted_explanation">కాలిబ్రేట్ చేయబడిన పరిమితుల్లో ప్రయోగాత్మక పరిశోధనా నిర్ధారణ. క్షేత్రస్థాయి చికిత్స కోసం కాదు.</string>
+
+    <string name="research_error_title">విశ్లేషణ లోపం</string>
+    <string name="research_error_open_image">ఎంచుకున్న చిత్ర ఫైల్‌ను తెరవడం సాధ్యం కాలేదు.</string>
+    <string name="research_error_decode_failed">చిత్రాన్ని ప్రాసెస్ చేయడం సాధ్యం కాలేదు. దయచేసి స్పష్టమైన JPG లేదా PNG ఫోటోను ఎంచుకోండి.</string>
+    <string name="research_error_inference_failed">పైప్‌లైన్ అమలు సమయంలో పరిశోధనా విశ్లేషణ విఫలమైంది.</string>
+    <string name="research_error_no_image_selected">చిత్రం ఎంచుకోబడలేదు. దయచేసి ముందుగా ఒక చిత్రాన్ని ఎంచుకోండి.</string>
+    <string name="research_camera_permission_denied_title">కెమెరా అనుమతి అవసరం</string>
+    <string name="research_camera_permission_denied_msg">పరిశోధన కోసం ఫోటోలు తీయడానికి కెమెరా అనుమతి అవసరం. దయచేసి కెమెరా యాక్సెస్ మంజూరు చేయండి.</string>
+
+    <!-- Cotton binary output is research-only and is not a validated diagnosis. -->
+    <string name="disease_cotton_bacterial_blight">పత్తి బ్యాక్టీరియల్ బ్లైట్ (ప్రయోగాత్మక లేబుల్)</string>
+    <string name="disease_cotton_healthy">ఆరోగ్యకరమైన పత్తి (ప్రయోగాత్మక లేబుల్)</string>
+    <string name="research_status_cotton_experimental_fmt">పత్తి పరిశోధన పైలట్: %1$s (మోడల్ స్కోర్ %2$d%%; కాలిబ్రేట్ చేయబడలేదు)</string>
+</resources>
